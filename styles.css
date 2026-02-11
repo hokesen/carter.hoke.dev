@@ -473,6 +473,14 @@ p {
   gap: 0.75rem;
 }
 
+.archive-grid > :last-child:nth-child(3n+1) {
+  grid-column: 1 / -1;
+}
+
+.archive-grid > :last-child:nth-child(3n+2) {
+  grid-column: span 2;
+}
+
 .gallery details {
   border: 1px solid var(--line);
   border-radius: 12px;
