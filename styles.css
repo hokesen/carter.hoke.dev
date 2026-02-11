@@ -547,6 +547,13 @@ p {
   object-fit: cover;
 }
 
+.media-frame--original img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: none;
+}
+
 .thumb-link {
   display: block;
   border-radius: var(--radius);
