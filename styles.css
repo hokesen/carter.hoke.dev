@@ -525,6 +525,28 @@ p {
   background: rgba(12, 20, 15, 0.96);
 }
 
+.hero-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0.9rem 0;
+}
+
+.hero-image-grid .media-frame--square {
+  min-width: 0;
+  max-width: none;
+}
+
+.media-frame--square {
+  max-width: 50%;
+}
+
+.media-frame--square img {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+}
+
 .thumb-link {
   display: block;
   border-radius: var(--radius);
