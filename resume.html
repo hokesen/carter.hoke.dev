@@ -36,6 +36,35 @@
   </section>
 </main>
 
-<footer class="site-footer"><div class="site-shell">© Carter Hoke</div></footer>
+<footer class="site-footer">
+  <div class="site-shell footer-inner">
+    <span>&copy; Carter Hoke</span>
+    <nav class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="dev-blog.html">Dev Blog</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".fade-in");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function (el) { obs.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("visible"); });
+    }
+  });
+</script>
 </body>
 </html>

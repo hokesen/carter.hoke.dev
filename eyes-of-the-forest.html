@@ -29,23 +29,60 @@
       <img src="https://carter.hoke.dev/wp-content/uploads/2025/11/1.png" alt="Eyes of the Forest">
     </figure>
   </section>
-  <section class="panel fade-in">
-    <h2>Original Gallery</h2>
+
+  <div class="kpi-row fade-in">
+    <div class="kpi"><strong>26</strong><span class="kpi-label">Team</span></div>
+    <div class="kpi"><strong>In Development</strong><span class="kpi-label">Status</span></div>
+    <div class="kpi"><strong>UE5</strong><span class="kpi-label">Engine</span></div>
+    <div class="kpi"><strong>Level & Encounter</strong><span class="kpi-label">Role</span></div>
+  </div>
+
+  <section class="panel gallery-section fade-in">
+    <h2>Preview Gallery</h2>
     <div class="archive-grid">
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/1.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/2.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/3.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/4.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/5.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/6.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/7.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/8.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/9.png" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/10.png" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/1.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/2.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/3.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/4.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/5.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/6.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/7.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/8.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/9.png" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/10.png" alt="" loading="lazy"></figure>
     </div>
   </section>
 </main>
 
-<footer class="site-footer"><div class="site-shell">© Carter Hoke</div></footer>
+<footer class="site-footer">
+  <div class="site-shell footer-inner">
+    <span>&copy; Carter Hoke</span>
+    <nav class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="dev-blog.html">Dev Blog</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".fade-in");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function (el) { obs.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("visible"); });
+    }
+  });
+</script>
 </body>
 </html>

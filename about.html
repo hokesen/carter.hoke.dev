@@ -32,20 +32,50 @@
       <img src="https://carter.hoke.dev/wp-content/uploads/2025/12/20220424_152105-1.jpg?w=768" alt="A Pacific Northwest Developer and Adventurer">
     </figure>
   </section>
-  <section class="panel fade-in">
-    <h2>Original Gallery</h2>
+
+  <section class="panel gallery-section fade-in">
+    <h2>Photo Gallery</h2>
     <div class="archive-grid">
-      <figure class="media-frame"><img src="https://carterhokedev.wordpress.com/wp-content/uploads/2025/09/oceanlowres.webp" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/20220424_152105-1.jpg?w=768" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/20230107_130334-2.jpg" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/carterburkepuddle.jpg" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2024/12/20231221_212123.jpg" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/09/simonsierra-1955.jpg" alt=""></figure>
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/gamez.png?w=1024" alt=""></figure>
+      <figure class="media-frame"><img src="https://carterhokedev.wordpress.com/wp-content/uploads/2025/09/oceanlowres.webp" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/20220424_152105-1.jpg?w=768" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/20230107_130334-2.jpg" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/carterburkepuddle.jpg" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2024/12/20231221_212123.jpg" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/09/simonsierra-1955.jpg" alt="" loading="lazy"></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/12/gamez.png?w=1024" alt="" loading="lazy"></figure>
     </div>
   </section>
 </main>
 
-<footer class="site-footer"><div class="site-shell">© Carter Hoke</div></footer>
+<footer class="site-footer">
+  <div class="site-shell footer-inner">
+    <span>&copy; Carter Hoke</span>
+    <nav class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="dev-blog.html">Dev Blog</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".fade-in");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function (el) { obs.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("visible"); });
+    }
+  });
+</script>
 </body>
 </html>

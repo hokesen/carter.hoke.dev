@@ -23,27 +23,50 @@
   <section class="hero fade-in">
     <h1>Development Blog</h1>
     <h2>These posts:</h2>
-    <p>Explore a variety of topics discussing in depth level design process & lessons learned from projects I’ve contributed to!</p>
+    <p>Explore a variety of topics discussing in depth level design process & lessons learned from projects I've contributed to!</p>
   </section>
 
   <section class="grid">
     <article class="card fade-in">
-      <h3>Analyzing Scene Compositions From Barton</h3>
-      <p>Introduction: Well howdy! This blog is a collection of scene compositions from Barton, A first person sci-fi themed puzzle adventure where the player has an open dialogue with a companion bot named Barton. This blog analyzes five scene / shot compositions from environments I’ve created in Barton, and discusses how they frame and highlight important…</p>
       <figure class="media-frame">
-        <img src="https://carter.hoke.dev/wp-content/uploads/2026/01/thumbnail.png" alt="Analyzing Scene Compositions From Barton">
+        <img src="https://carter.hoke.dev/wp-content/uploads/2026/01/thumbnail.png" alt="Analyzing Scene Compositions From Barton" loading="lazy">
       </figure>
+      <h3>Analyzing Scene Compositions From Barton</h3>
+      <p>Introduction: Well howdy! This blog is a collection of scene compositions from Barton, A first person sci-fi themed puzzle adventure where the player has an open dialogue with a companion bot named Barton. This blog analyzes five scene / shot compositions from environments I've created in Barton, and discusses how they frame and highlight important…</p>
       <a class="btn" href="blog/analyzing-scene-compositions-in-barton.html">Analyzing Scene Compositions From Barton</a>
     </article>
   </section>
-  <section class="panel fade-in">
-    <h2>Original Gallery</h2>
-    <div class="archive-grid">
-      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2026/01/thumbnail.png" alt=""></figure>
-    </div>
-  </section>
 </main>
 
-<footer class="site-footer"><div class="site-shell">© Carter Hoke</div></footer>
+<footer class="site-footer">
+  <div class="site-shell footer-inner">
+    <span>&copy; Carter Hoke</span>
+    <nav class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="dev-blog.html">Dev Blog</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var els = document.querySelectorAll(".fade-in");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function (el) { obs.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("visible"); });
+    }
+  });
+</script>
 </body>
 </html>
