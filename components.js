@@ -50,6 +50,13 @@
     el.innerHTML =
       '<div class="site-shell footer-inner">' +
         "<span>&copy; Carter Hoke</span>" +
+        '<div class="footer-contact">' +
+          '<span class="footer-contact-label">Contact:</span>' +
+          '<div class="footer-contact-links">' +
+            '<a href="https://www.linkedin.com/in/carter-hoke-46943325a/" target="_blank" rel="noreferrer">LinkedIn</a>' +
+            '<a href="mailto:carterhoke@gmail.com">carterhoke@gmail.com</a>' +
+          '</div>' +
+        '</div>' +
         '<nav class="footer-links">' +
           '<a href="' + prefix + 'portfolio.html">Portfolio</a>' +
           '<a href="' + prefix + 'about.html">About</a>' +
