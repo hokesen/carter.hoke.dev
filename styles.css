@@ -322,6 +322,19 @@ p {
   color: #d6e3d2;
 }
 
+.featured-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.featured-list li {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
 /* ---------- Buttons ---------- */
 
 .btn-row {
