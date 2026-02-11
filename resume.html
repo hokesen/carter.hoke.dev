@@ -10,14 +10,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="site-shell header-inner">
-    <a class="brand" href="index.html"><span class="brand-title">Carter Hoke</span><span class="brand-subtitle">Dev Blog, Level Design Portfolio</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="resume.html" aria-current="page">Resume</a><a href="dev-blog.html">Dev Blog</a>
-    </nav>
-  </div>
-</header>
+<header class="site-header" id="site-header"></header>
 
 <main class="site-shell">
   <section class="hero fade-in">
@@ -36,35 +29,7 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="site-shell footer-inner">
-    <span>&copy; Carter Hoke</span>
-    <nav class="footer-links">
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="dev-blog.html">Dev Blog</a>
-    </nav>
-  </div>
-</footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var els = document.querySelectorAll(".fade-in");
-    if ("IntersectionObserver" in window) {
-      var obs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      els.forEach(function (el) { obs.observe(el); });
-    } else {
-      els.forEach(function (el) { el.classList.add("visible"); });
-    }
-  });
-</script>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="components.js"></script>
 </body>
 </html>
