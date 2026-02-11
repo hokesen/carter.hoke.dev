@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Specter Inspector | Carter Hoke</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="site-shell header-inner">
+    <a class="brand" href="index.html"><span class="brand-title">Carter Hoke</span><span class="brand-subtitle">Dev Blog, Level Design Portfolio</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="portfolio.html" aria-current="page">Portfolio</a><a href="about.html">About</a><a href="resume.html">Resume</a><a href="dev-blog.html">Dev Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="site-shell">
+  <section class="hero fade-in">
+    <h1>Specter Inspector</h1>
+    <h2>What is Specter Inspector?</h2>
+    <p>A 2D horror themed task management & evasion game, with a unique window mechanic.</p>
+    <p>Use tools, navigate through an increasingly treacherous graveyard, while avoiding specters corrupting your screen. Operates as pop up draggable windows on your desktop.</p>
+    <p>8 person academic game team, created in a custom engine, shipped to Steam.</p>
+    <p>Watch the trailer below:</p>
+    <figure class="media-frame">
+      <img src="https://carter.hoke.dev/wp-content/uploads/2025/09/screenshot-2024-04-15-205426.png" alt="Specter Inspector">
+    </figure>
+  </section>
+
+  <section class="panel fade-in">
+    <h2>My Roles:</h2>
+    <p>Level Designer:</p>
+    <p>My goal and primary responsibility as the level designer was to ensure that the mechanics, systems, and intended gameplay of Specter Inspector were all exceptionally showcased and emphasized within the spaces where gameplay occurred.</p>
+    <p>We programmed 3 varieties of enemies? Well, then they all need to be utilized in meaningful ways that highlights their differences. We created a tool that uses consumable batteries? Well, lets make finding the batteries engaging, and put the player in interesting spots when they need to stop and load them. I could go on…</p>
+    <p>That truly is one of my greatest joys in being a level designer. Being able to show off the fruits of my teammates labor, and spotlight systems, mechanics, and design through the level geometry.</p>
+    <p>Design Lead:</p>
+    <p>Ensuring design cohesion & consistent progress was being made towards development was my primary responsibility as a design lead. This meant:</p>
+    <ul class="list">
+      <li>Ensuring our designers had relevant and impactful tasks to complete.</li>
+      <li>The overall direction of game design aligned with our game pillars.</li>
+      <li>Working with the tech team to realize and match prototype gameplay into our engine.</li>
+      <li>Support my fellow designers and teammates.</li>
+    </ul>
+    <p>Because of the small size of our team, a number of other game design responsibilities fell to me. Such as:</p>
+    <ul class="list">
+      <li>Conducting frequent participant observation playtesting, generating user research reports based on feedback.</li>
+      <li>Creating the original soundtrack for the game. Three tracks were created, one for the main menu, one for gameplay, and the other for a now scrapped final boss, that now serves as the trailer music! Listen to the OST below:</li>
+    </ul>
+  </section>
+
+  <section class="panel fade-in">
+    <h2>Level Design Process:</h2>
+    <h2>Project Overview:</h2>
+    <p>The opening composition of Specter Inspector.</p>
+    <p>Scope:</p>
+    <p>Custom engine built by 5 programmers. Two semesters (about 30 weeks) of development time. About 13 minutes of gameplay. Three distinct modules of gameplay.</p>
+    <p>Team collaboration:</p>
+    <p>With 3 designers, and 5 programmers, we cohesively settled on the theme and concept for Specter Inspector very early in development. Us designers sorted ourselves into UX, tech design, and (for me) level design roles.</p>
+    <p>For the first half of development, programmers were building our custom engine from only a handful of libraries. This would take them roughly half of dev time to build the engine itself.</p>
+    <p>So while the tech team was figuring out how to make a rectangle render on screen, us designers were working together rapidly prototyping gameplay in Unity, that we hoped would one day have functionality in our engine…</p>
+    <p>Our team logo, featuring each developer depicted as cute ghosts!</p>
+    <p>Prototyping in Unity:</p>
+    <p>Once the concept of a draggable window that you see your character, and the game world through was implemented in Unity, level iteration and ideation began.</p>
+    <p>I started creating 2D tile maps, and iterating on enemy behavior, level pacing, and balancing encounter design. Some lessons were learned early on, while others took much more time and investment to make themselves known. More on this later…</p>
+    <p>Much of these early tile maps never saw the light of day in the final game, but watching players navigate through these spaces while contextualizing with our mechanics helped me define and narrow down the types of spaces that served our unique concept well!</p>
+    <p>Mazes and complicated route-finding led to player frustration, while linear but open and wide levels were easier to understand, and more compelling to navigate. Because the player can only ever see a small window of the game world, finding the right balance between involved route-finding, and branching paths, vs entirely linear design was one of my many challenges to solve.</p>
+    <p>A Unity prototype experimenting with different window sizes & level transitioning.</p>
+    <p>Implementing levels in a custom engine:</p>
+    <p>Roughly 15 weeks from when the project started, was when the custom engine became ready for serious gameplay integration. Our programmers decided not to create editor tools in engine for us designers to use, and opted for a more direct route in regards to integrating gameplay into the custom engine.</p>
+    <p>Instead of building it all from scratch in engine based on the prototypes us designers had been creating, we had an illuminating thought:</p>
+    <p>Why should we build it all anew if we can instead just bring it over directly from Unity? We would serialize every UI piece, tile map, enemy, and game asset directly from Unity into our custom engine through Json files.</p>
+    <p>Our programmers had this in mind from the start, so the structure of our engine intentionally matched the component based system that Unity is built like. Serializing every asset was a tedious process, which mostly fell to the purview of our producer.</p>
+    <p>Unsurprisingly, serializing large chunks of tile maps from Unity to a custom engine did result in some friction. On my part, identifying broken geometry, tweaking collisions, consistently testing, and being in constant communication with the tech team helped us get these levels functional! Getting objects properly rotated was especially difficult to nail down, and even in the final build some of the tiles were never properly rotated.</p>
+    <p>The win state for Specter Inspector, captured from an early engine build.</p>
+    <p>Prototyping & Ideation:</p>
+    <p>The fundamental mechanics of Specter Inspector didn’t change much through iteration, but behavior of our tools the player would use (the E.M.P & E.M.F devices), as well as the structure and flow of levels did go through many iterations.</p>
+    <p>An early Unity prototype for the view window & player movement.</p>
+    <p>The E.M.F device alerted players of nearby specters through visual and audio feedback, which remained mostly the same throughout development. The only substantial changes we made were to make the feedback more obvious and salient to the player.</p>
+    <p>The E.M.P device was previously a ‘Ghost Zapper’, that destroyed ghosts when used on them, however we wanted players to feel scared and inconsequential to the specters they faced. Instead, we opted for this device to stun specters, buying the player a moment to run away, or pass through the specter unharmed. We made this device operated through single use batteries found within the levels, that the player would have to manually load in order to use.</p>
+    <p>A prototype displaying the E.M.F, and an enemy for the player to overcome.</p>
+    <p>The structure of our levels originally was one long level with no checkpoints, which gradually got more difficult. However, this format led to player frustrations, a stressful experience, and uneven pacing. We wanted the player to feel tension, but not overtly stressed to the point of not enjoying the experience. We wanted the player to feel like they were playing a balanced cohesive experience with varying levels and engagement curves, not an unrewarding gauntlet.</p>
+    <p>To fix these pacing issues, I decided to separate the game into three distinct levels:</p>
+    <ul class="list">
+      <li>Inspector Training – Movement & base game tutorial, 4 screens of levels.</li>
+      <li>E.M.F. Training – E.M.F tool usage & simple but progressively more difficult encounter design, 10 screens of levels.</li>
+      <li>E.M.P Training – E.M.P tool usage & more involved & thoughtful encounter design, climaxing in a challenging ending to the game.</li>
+    </ul>
+    <p>This way to structure the flow of the game chunked our mechanics into individual, understandable sections of gameplay that allowed us to build tension and engagement in a cohesive manor.</p>
+    <p>View of a full level screen, as seen from the Unity editor.</p>
+  </section>
+
+  <section class="panel fade-in">
+    <h2>Polishing & Publishing to Steam:</h2>
+    <p>The Timeline:</p>
+    <p>After Specter Inspector was officially submitted in an academic capacity, development stopped entirely. The team took about a year away from Specter Inspector to work on another academic project called Barton (which you can read more about in my projects page!). Knowing the potential Specter Inspector had, and not wanting to squander it, I rallied a few of our most dedicated teammates behind me, and we spent the summer of 2025 paving the way for a Steam release.</p>
+    <p>Final Touches:</p>
+    <p>We integrated the main menu, a few UI changes, and fixed a few minor bugs. The temptation to revisit my tile maps was certainly there, and there are changes I still wish I could have made to this day. But given the limited time and capacity we had, i deemed doing any additional level polish too risky, and settled for what we had.</p>
+    <p>Release:</p>
+    <p>Then it was only a matter of creating all the required Steam assets, content for the store page, and library page. Creating the trailer, and all of these assets fell to me. Tasks which I happily completed. And soon enough, Specter Inspector released to the world on August 15th, 2025.</p>
+    <p>Below is a full gameplay video of Specter Inspector.</p>
+    <p>Check out the level spaces I created, and see what the experience is like!</p>
+    <p>Linked below is the Steam Page for Specter Inspector:</p>
+    <p>Check out the Steam Page, and play Specter Inspector for yourself!</p>
+  </section>
+  <section class="panel fade-in">
+    <h2>Original Gallery</h2>
+    <div class="archive-grid">
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/09/screenshot-2025-06-27-143934.png" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/09/screenshot-2024-04-15-205426.png" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/spectralsquad.jpg" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2026/01/ezgif-6408ef99d34d5c13.gif" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/screenshot-2024-04-15-202308-1.png?w=1024" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/10/bobert.png?w=1024" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/screenshot-2023-11-28-191225.png?w=1024" alt=""></figure>
+      <figure class="media-frame"><img src="https://carter.hoke.dev/wp-content/uploads/2025/11/screenshot-2024-02-07-153058-1.png?w=979" alt=""></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="site-shell">© Carter Hoke</div></footer>
+</body>
+</html>
