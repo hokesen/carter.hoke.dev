@@ -3,6 +3,90 @@ layout: default
 title: "Expansive Fantasy Survival | Carter Hoke"
 nav_active: "Portfolio"
 ---
+<style>
+  .hero h1,
+  .panel h2 {
+    text-align: center;
+  }
+  
+  .panel h2 {
+    background: linear-gradient(135deg, var(--brand), #e2f0db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: showcase-glow 4s ease-in-out infinite;
+    font-size: clamp(1.8rem, 4.3vw, 3.3rem);
+    font-family: "Outfit", "Sora", sans-serif;
+    line-height: 1.2;
+    margin: 0 0 0.7rem;
+  }
+  
+  .hero h2,
+  .hero h3,
+  .panel h3 {
+    text-align: center;
+    font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  }
+  
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  .archive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .archive-grid .media-frame {
+    width: 100%;
+  }
+  
+  .archive-grid .media-frame img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .kpi-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero h3,
+  .panel h3 {
+    margin-top: 2rem;
+  }
+</style>
+<script>
+  // Override tilt intensity for this page's longer hero block
+  (function() {
+    // Wait for the default script to run first
+    setTimeout(function() {
+      var hero = document.querySelector(".hero");
+      if (!hero) return;
+
+      var MAX_TILT = 0.5; // Extra gentle for longer block
+
+      hero.addEventListener("mousemove", function (e) {
+        var rect = hero.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width * 2 - 1;
+        var y = (e.clientY - rect.top) / rect.height * 2 - 1;
+
+        var rotY = x * MAX_TILT;
+        var rotX = -y * MAX_TILT;
+
+        hero.style.transform =
+          "perspective(800px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
+      });
+    }, 100);
+  })();
+</script>
 <section class="hero fade-in">
   <h1>Expansive Fantasy Survival</h1>
   <h2>What is Expansive Fantasy Survival?</h2>
@@ -10,17 +94,18 @@ nav_active: "Portfolio"
   <p>This Minecraft map was made solely by me over the course of two and a half years, and is now accessible to all for free!</p>
   <p>Expansive Fantasy Survival was mostly built in a software called world painter, with many custom brushes, structures, and iteration to shape this unique world. About half of the custom structures are schematics I made personally, and I made a variety of custom trees as well! Once landscaping was complete, I used the world edit plugin to tweak a few things, and add a few more structures by hand throughout the map.</p>
   <p>This world is 15k x 15k Minecraft blocks wide, which translates to roughly 86 square miles of terrain!</p>
-  <p>I have been making Minecraft maps like this for around ten years now, and this map is the culmination of all my world painter, building, map making knowledge, and game design principles, and all tied together with a cohesive theme. See some of the world in the trailer below:</p>
+  <p>I have been making Minecraft maps like this for around ten years now, and this map is the culmination of all my world painter, building, map making knowledge, and game design principles, and all tied together with a cohesive theme.</p>
+  <h3>Watch the trailer for Expansive Fantasy Survival:</h3>
   <figure class="media-frame">
-    <img src="assets/carter_world_nw-2560.png" alt="Expansive Fantasy Survival">
+    <iframe src="https://www.youtube.com/embed/yfiZiR8x4FI?rel=1&showinfo=1&fs=1" title="Expansive Fantasy Survival Trailer" style="width:100%; aspect-ratio:16/9; border:0;" allowfullscreen loading="lazy"></iframe>
   </figure>
 </section>
 
 <div class="kpi-row fade-in">
-  <div class="kpi"><strong>Solo</strong><span class="kpi-label">Team</span></div>
-  <div class="kpi"><strong>2.5 Years</strong><span class="kpi-label">Duration</span></div>
-  <div class="kpi"><strong>WorldPainter</strong><span class="kpi-label">Tool</span></div>
-  <div class="kpi"><strong>86 sq mi</strong><span class="kpi-label">Scale</span></div>
+  <div class="kpi"><strong>Solo Development</strong></div>
+  <div class="kpi"><strong>2.5 Year Project</strong></div>
+  <div class="kpi"><strong>86 sq mi of Terrain</strong></div>
+  <div class="kpi"><strong>1,900+ Downloads</strong></div>
 </div>
 
 <section class="panel fade-in">
@@ -32,17 +117,17 @@ nav_active: "Portfolio"
     <li>Taking some time away, and coming back for final polish. I took a number of months off of working on this project, and when I did come back to it, I felt reinvigorated and motivated to push it across the finish line. Some of the final polish included: Implementing environmental storytelling. This includes adding structures to the map. Old buildings, ancient ruins, pathways, bustling villages, all tell a story and give previously empty spaces more meaning and purpose. What happened here? What can the user discover and derive their own meaning from? Place more meaningful landmarks. An empty ocean? Let's make it frigid with icebergs, it's more fun to sail across that way anyhow! Empty canyon floors? Lets add old highways that lead the player directly to new areas and landmarks to survey. This makes horse travel a viable option across.</li>
     <li>Knowing when to call it quits: Art is never finished, only abandoned. knowing when to finally leave your work behind (especially when it is self paced) can be very difficult. Which is why the project took numerous years to finish in the first place. That being said, once each area was polished and meaningfully improved upon, it was a great relief to take my hands off of it, and publish my world for anybody to experience! One of the last steps here was to brand the world, and upload it to one of the most popular Minecraft map hosting sites, Planet Minecraft. This project had an unofficial name throughout development, so I had to settle on a final title for the world. What would describe the whimsical, large scale, and survival mode friendly aspects of this world? So after some deliberation, Expansive Fantasy Survival was given it's identity.</li>
   </ul>
-  <p>Here is the official site where Expansive Fantasy Survival can be downloaded:</p>
-  <p><a href="https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map" target="_blank" rel="noreferrer">https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map</a></p>
-  <p>Explore some of the final renders of the world below:</p>
+  <h3>Here is the official site where Expansive Fantasy Survival can be downloaded:</h3>
+  <p style="text-align: center;"><a href="https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map" target="_blank" rel="noreferrer">https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map</a></p>
 </section>
 
-<section class="panel gallery-section fade-in">
+<section class="panel fade-in">
   <h2>World Renders</h2>
   <div class="archive-grid">
-    <figure class="media-frame"><img src="assets/carter_world_overview-256.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/carter_world_ne-4096.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/carter_world_nw-2560.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/carter_world_sw-1536.png" alt="" loading="lazy"></figure>
+    <figure class="media-frame contain"><img src="assets/carter_world_overview-256.png" alt="" loading="lazy"></figure>
+    <figure class="media-frame contain"><img src="assets/carter_world_nw-2560.png" alt="" loading="lazy"></figure>
+    <figure class="media-frame contain"><img src="assets/carter_world_ne-4096.png" alt="" loading="lazy"></figure>
+    <figure class="media-frame contain"><img src="assets/carter_world_sw-1536.png" alt="" loading="lazy"></figure>
+    <figure class="media-frame contain"><img src="assets/oceanlowres.webp" alt="" loading="lazy"></figure>
   </div>
 </section>
