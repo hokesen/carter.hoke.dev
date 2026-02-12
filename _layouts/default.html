@@ -38,5 +38,33 @@
     }
   })();
   </script>
+
+  <script>
+  (function () {
+    var hero = document.querySelector(".hero");
+    if (!hero) return;
+
+    var MAX_TILT = 4; // degrees
+
+    hero.addEventListener("mousemove", function (e) {
+      var rect = hero.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width * 2 - 1;
+      var y = (e.clientY - rect.top) / rect.height * 2 - 1;
+
+      var rotY = x * MAX_TILT;
+      var rotX = -y * MAX_TILT;
+
+      hero.style.transform =
+        "perspective(800px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
+
+      hero.classList.add("tilt-active");
+    });
+
+    hero.addEventListener("mouseleave", function () {
+      hero.style.transform = "";
+      hero.classList.remove("tilt-active");
+    });
+  })();
+  </script>
 </body>
 </html>

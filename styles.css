@@ -218,6 +218,17 @@ main {
   box-shadow: var(--shadow);
   padding: clamp(1.3rem, 2vw, 3rem);
   margin-bottom: 2rem;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: center;
 }
 
 .hero h1 {
@@ -231,13 +242,6 @@ main {
   margin-bottom: 0.5rem;
   text-shadow: 0 0 40px rgba(69, 184, 138, 0.3);
   animation: showcase-glow 4s ease-in-out infinite;
-}
-
-.hero-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  align-items: center;
 }
 
 .eyebrow {
@@ -596,6 +600,10 @@ p {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 18%;
+}
+
+.hero .media-frame:hover img {
+  transform: none;
 }
 
 .media-grid {
