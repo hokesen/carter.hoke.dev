@@ -354,12 +354,14 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(133, 194, 107, 0.4);
-  background: linear-gradient(135deg, rgba(133, 194, 107, 0.22), rgba(133, 194, 107, 0.1));
-  border-radius: 999px;
-  padding: 0.56rem 0.98rem;
-  font-weight: 600;
-  font-size: 0.9rem;
+  border: 1.5px solid var(--brand);
+  background: linear-gradient(135deg, rgba(133, 194, 107, 0.28), rgba(133, 194, 107, 0.14));
+  border-radius: var(--radius-sm);
+  padding: 0.62rem 1.35rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
   transition: var(--transition-fast);
   position: relative;
   overflow: hidden;
@@ -370,15 +372,16 @@ p {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: rgba(133, 194, 107, 0.12);
+  background: rgba(133, 194, 107, 0.15);
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
 
 .btn:hover {
-  border-color: rgba(133, 194, 107, 0.58);
+  background: linear-gradient(135deg, rgba(133, 194, 107, 0.42), rgba(133, 194, 107, 0.22));
+  border-color: #a8d896;
   transform: translateY(-1px);
-  box-shadow: 0 4px 18px rgba(133, 194, 107, 0.2);
+  box-shadow: 0 6px 22px rgba(133, 194, 107, 0.25);
 }
 
 .btn:hover::before {
@@ -419,13 +422,17 @@ p {
 }
 
 .btn.secondary {
+  color: var(--muted);
+  font-weight: 600;
   border-color: rgba(201, 173, 106, 0.4);
   background: linear-gradient(135deg, rgba(201, 173, 106, 0.22), rgba(201, 173, 106, 0.1));
 }
 
 .btn.secondary:hover {
-  border-color: rgba(201, 173, 106, 0.6);
-  box-shadow: 0 4px 18px rgba(201, 173, 106, 0.2);
+  border-color: var(--brand-2);
+  color: var(--text);
+  background: rgba(201, 173, 106, 0.12);
+  box-shadow: 0 6px 22px rgba(201, 173, 106, 0.18);
 }
 
 /* ---------- Section ---------- */
@@ -673,6 +680,44 @@ p {
 
 .project-card-body p {
   margin-bottom: 0.5rem;
+}
+
+/* ---------- Sightline Game ---------- */
+
+.sightline-section {
+  margin-top: 1.4rem;
+}
+
+.sightline-section h2 {
+  margin-bottom: 0.3rem;
+}
+
+.sightline-hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+  transition: color 400ms ease;
+}
+
+.sightline-hint.solved {
+  color: var(--brand-2);
+  font-weight: 600;
+}
+
+#game-container {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 0.8rem;
+}
+
+#game-container canvas {
+  display: block;
+  width: 100%;
+}
+
+.sightline-reset {
+  font-size: 0.84rem;
+  margin-top: 0.4rem;
 }
 
 /* ---------- CTA Block ---------- */
