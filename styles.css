@@ -157,8 +157,8 @@ main a:hover {
   top: 100%;
   left: 0;
   min-width: 240px;
-  padding: 0.45rem;
-  margin-top: 0.3rem;
+  padding: 0.55rem;
+  padding-top: 0.75rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -168,6 +168,15 @@ main a:hover {
   transform: translateY(-4px);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
   z-index: 30;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
 }
 
 .nav-item:hover .nav-dropdown,
