@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="site-shell header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-title">Carter Hoke</span>
+      <span class="brand-subtitle">Dev Blog, Level Design Portfolio</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-item">
+        <a href="{{ '/portfolio.html' | relative_url }}"{% if page.nav_active == "Portfolio" %} aria-current="page"{% endif %}>Portfolio <span class="nav-chevron">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <a href="{{ '/eyes-of-the-forest.html' | relative_url }}">Eyes of the Forest</a>
+          <a href="{{ '/barton.html' | relative_url }}">Barton</a>
+          <a href="{{ '/specter-inspector.html' | relative_url }}">Specter Inspector</a>
+          <a href="{{ '/expansive-fantasy-survival.html' | relative_url }}">Expansive Fantasy Survival</a>
+        </div>
+      </div>
+      <a href="{{ '/about.html' | relative_url }}"{% if page.nav_active == "About" %} aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/resume.html' | relative_url }}"{% if page.nav_active == "Resume" %} aria-current="page"{% endif %}>Resume</a>
+      <div class="nav-item">
+        <a href="{{ '/dev-blog.html' | relative_url }}"{% if page.nav_active == "Dev Blog" %} aria-current="page"{% endif %}>Dev Blog <span class="nav-chevron">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <a href="{{ '/blog/analyzing-scene-compositions-in-barton.html' | relative_url }}">Analyzing Scene Compositions From Barton</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
