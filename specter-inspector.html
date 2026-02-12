@@ -3,6 +3,49 @@ layout: default
 title: "Specter Inspector | Carter Hoke"
 nav_active: "Portfolio"
 ---
+<style>
+  .hero h1,
+  .panel h2 {
+    text-align: center;
+  }
+  
+  .panel h2 {
+    background: linear-gradient(135deg, var(--brand), #e2f0db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: showcase-glow 4s ease-in-out infinite;
+    font-size: clamp(1.8rem, 4.3vw, 3.3rem);
+    font-family: "Outfit", "Sora", sans-serif;
+    line-height: 1.2;
+    margin: 0 0 0.7rem;
+  }
+  
+  .hero h2,
+  .panel h3 {
+    text-align: center;
+    font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  }
+  
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+  }
+  
+  .kpi-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .media-frame[style*="max-width: 50%"] {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
 <section class="hero fade-in">
   <h1>Specter Inspector</h1>
   <figure class="media-frame">
@@ -19,10 +62,9 @@ nav_active: "Portfolio"
 </section>
 
 <div class="kpi-row fade-in">
-  <div class="kpi"><strong>8</strong><span class="kpi-label">Team</span></div>
-  <div class="kpi"><strong>~30 Weeks</strong><span class="kpi-label">Duration</span></div>
-  <div class="kpi"><strong>Custom</strong><span class="kpi-label">Engine</span></div>
-  <div class="kpi"><strong>Steam</strong><span class="kpi-label">Platform</span></div>
+  <div class="kpi"><strong>8 person team</strong></div>
+  <div class="kpi"><strong>Custom engine</strong></div>
+  <div class="kpi"><strong>Shipped to Steam</strong></div>
 </div>
 
 <section class="panel fade-in">
@@ -51,6 +93,9 @@ nav_active: "Portfolio"
 
 <section class="panel fade-in">
   <h2>Level Design Process:</h2>
+</section>
+
+<section class="panel fade-in">
   <h2>Project Overview:</h2>
   <figure class="media-frame">
     <img src="assets/screenshot-2024-04-15-205426.png" alt="The opening composition of Specter Inspector" loading="lazy">
@@ -124,6 +169,6 @@ nav_active: "Portfolio"
   <figure class="media-frame">
     <iframe src="https://www.youtube.com/embed/fjEROpR-FmE?rel=1&showinfo=1&fs=1&listType=playlist&list=PLW5DKXHQHWFYIc19weCqt_METKlU5IehL" title="Specter Inspector (Full Gameplay Video)" style="width:100%; aspect-ratio:16/9; border:0;" allowfullscreen loading="lazy"></iframe>
   </figure>
-  <p>Linked below is the Steam Page for Specter Inspector:</p>
-  <p><a href="https://store.steampowered.com/app/3912380/Specter_Inspector/" target="_blank" rel="noreferrer">Check out the Steam Page, and play Specter Inspector for yourself!</a></p>
+  <h3>Linked below is the Steam Page for Specter Inspector:</h3>
+  <p style="text-align: center;"><a href="https://store.steampowered.com/app/3912380/Specter_Inspector/" target="_blank" rel="noreferrer">Check out the Steam Page, and play Specter Inspector for yourself!</a></p>
 </section>
