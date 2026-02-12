@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -102,9 +103,24 @@
         </div>
       </a>
     </section>
+
+    <section class="sightline-section fade-in">
+      <h2>Guide the Player's Eye</h2>
+      <p class="sightline-hint" id="game-message">Drag the beacons to create an unbroken sightline from start to exit.</p>
+      <div id="game-container"></div>
+      <p class="sightline-reset"><a href="#" id="game-reset">Reset puzzle</a></p>
+    </section>
+
+    <section class="cta-block fade-in">
+      <h2>Contact:</h2>
+      <p><a href="mailto:carterhoke@gmail.com">carterhoke@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/in/carter-hoke-46943325a/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+    </section>
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
   <script src="components.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+  <script type="module" src="sightline-game.js"></script>
 </body>
 </html>
