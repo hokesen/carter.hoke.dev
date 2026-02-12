@@ -26,6 +26,20 @@
     return '<a href="' + prefix + href + '"' + aria + ">" + label + "</a>";
   }
 
+  function navDropdown(href, label, items) {
+    var aria = label === active ? ' aria-current="page"' : "";
+    var links = "";
+    for (var i = 0; i < items.length; i++) {
+      links += '<a href="' + prefix + items[i].href + '">' + items[i].label + "</a>";
+    }
+    return (
+      '<div class="nav-item">' +
+        '<a href="' + prefix + href + '"' + aria + ">" + label + ' <span class="nav-chevron">&#9662;</span></a>' +
+        '<div class="nav-dropdown">' + links + "</div>" +
+      "</div>"
+    );
+  }
+
   function initHeader() {
     var el = document.getElementById("site-header");
     if (!el) return;
@@ -36,10 +50,17 @@
           '<span class="brand-subtitle">Dev Blog, Level Design Portfolio</span>' +
         "</a>" +
         '<nav class="nav" aria-label="Main navigation">' +
-          navLink("portfolio.html", "Portfolio") +
+          navDropdown("portfolio.html", "Portfolio", [
+            { href: "eyes-of-the-forest.html", label: "Eyes of the Forest" },
+            { href: "barton.html", label: "Barton" },
+            { href: "specter-inspector.html", label: "Specter Inspector" },
+            { href: "expansive-fantasy-survival.html", label: "Expansive Fantasy Survival" }
+          ]) +
           navLink("about.html", "About") +
           navLink("resume.html", "Resume") +
-          navLink("dev-blog.html", "Dev Blog") +
+          navDropdown("dev-blog.html", "Dev Blog", [
+            { href: "blog/analyzing-scene-compositions-in-barton.html", label: "Analyzing Scene Compositions From Barton" }
+          ]) +
         "</nav>" +
       "</div>";
   }

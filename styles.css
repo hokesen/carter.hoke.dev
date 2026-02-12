@@ -132,6 +132,68 @@ main a:hover {
   background: rgba(133, 194, 107, 0.16);
 }
 
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-chevron {
+  font-size: 0.65em;
+  opacity: 0.6;
+  margin-left: 0.1em;
+  vertical-align: 0.05em;
+  transition: transform var(--transition-fast);
+  display: inline-block;
+}
+
+.nav-item:hover .nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  padding: 0.45rem;
+  margin-top: 0.3rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  z-index: 30;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+  border: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav-dropdown a:hover {
+  color: var(--text);
+  background: rgba(133, 194, 107, 0.16);
+  border: none;
+}
+
 main {
   padding: 3rem 0 5rem;
 }
