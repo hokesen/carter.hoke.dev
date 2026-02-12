@@ -5,14 +5,14 @@ nav_active: "Portfolio"
 ---
 <section class="hero fade-in">
   <h1>Specter Inspector</h1>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2025-06-27-143934.png" alt="Specter Inspector">
+  </figure>
   <h2>What is Specter Inspector?</h2>
   <p>A 2D horror themed task management & evasion game, with a unique window mechanic.</p>
   <p>Use tools, navigate through an increasingly treacherous graveyard, while avoiding specters corrupting your screen. Operates as pop up draggable windows on your desktop.</p>
   <p>8 person academic game team, created in a custom engine, shipped to Steam.</p>
   <p>Watch the trailer below:</p>
-  <figure class="media-frame">
-    <img src="assets/screenshot-2024-04-15-205426.png" alt="Specter Inspector">
-  </figure>
 </section>
 
 <div class="kpi-row fade-in">
@@ -41,38 +41,59 @@ nav_active: "Portfolio"
     <li>Conducting frequent participant observation playtesting, generating user research reports based on feedback.</li>
     <li>Creating the original soundtrack for the game. Three tracks were created, one for the main menu, one for gameplay, and the other for a now scrapped final boss, that now serves as the trailer music! Listen to the OST below:</li>
   </ul>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2024-04-15-205426.png" alt="The opening composition of Specter Inspector" loading="lazy">
+  </figure>
 </section>
 
 <section class="panel fade-in">
   <h2>Level Design Process:</h2>
   <h2>Project Overview:</h2>
-  <p>The opening composition of Specter Inspector.</p>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2024-04-15-205426.png" alt="The opening composition of Specter Inspector" loading="lazy">
+    <figcaption>The opening composition of Specter Inspector.</figcaption>
+  </figure>
   <h3>Scope:</h3>
   <p>Custom engine built by 5 programmers. Two semesters (about 30 weeks) of development time. About 13 minutes of gameplay. Three distinct modules of gameplay.</p>
   <h3>Team collaboration:</h3>
   <p>With 3 designers, and 5 programmers, we cohesively settled on the theme and concept for Specter Inspector very early in development. Us designers sorted ourselves into UX, tech design, and (for me) level design roles.</p>
   <p>For the first half of development, programmers were building our custom engine from only a handful of libraries. This would take them roughly half of dev time to build the engine itself.</p>
   <p>So while the tech team was figuring out how to make a rectangle render on screen, us designers were working together rapidly prototyping gameplay in Unity, that we hoped would one day have functionality in our engine…</p>
-  <p>Our team logo, featuring each developer depicted as cute ghosts!</p>
+  <figure class="media-frame">
+    <img src="assets/spectralsquad.jpg" alt="Spectral Squad team logo" loading="lazy">
+    <figcaption>Our team logo, featuring each developer depicted as cute ghosts!</figcaption>
+  </figure>
   <h3>Prototyping in Unity:</h3>
   <p>Once the concept of a draggable window that you see your character, and the game world through was implemented in Unity, level iteration and ideation began.</p>
   <p>I started creating 2D tile maps, and iterating on enemy behavior, level pacing, and balancing encounter design. Some lessons were learned early on, while others took much more time and investment to make themselves known. More on this later…</p>
   <p>Much of these early tile maps never saw the light of day in the final game, but watching players navigate through these spaces while contextualizing with our mechanics helped me define and narrow down the types of spaces that served our unique concept well!</p>
   <p>Mazes and complicated route-finding led to player frustration, while linear but open and wide levels were easier to understand, and more compelling to navigate. Because the player can only ever see a small window of the game world, finding the right balance between involved route-finding, and branching paths, vs entirely linear design was one of my many challenges to solve.</p>
-  <p>A Unity prototype experimenting with different window sizes & level transitioning.</p>
+  <figure class="media-frame">
+    <img src="assets/ezgif-6408ef99d34d5c13.gif" alt="Unity prototype with different window sizes" loading="lazy">
+    <figcaption>A Unity prototype experimenting with different window sizes & level transitioning.</figcaption>
+  </figure>
   <h3>Implementing levels in a custom engine:</h3>
   <p>Roughly 15 weeks from when the project started, was when the custom engine became ready for serious gameplay integration. Our programmers decided not to create editor tools in engine for us designers to use, and opted for a more direct route in regards to integrating gameplay into the custom engine.</p>
   <p>Instead of building it all from scratch in engine based on the prototypes us designers had been creating, we had an illuminating thought:</p>
   <p>Why should we build it all anew if we can instead just bring it over directly from Unity? We would serialize every UI piece, tile map, enemy, and game asset directly from Unity into our custom engine through Json files.</p>
   <p>Our programmers had this in mind from the start, so the structure of our engine intentionally matched the component based system that Unity is built like. Serializing every asset was a tedious process, which mostly fell to the purview of our producer.</p>
   <p>Unsurprisingly, serializing large chunks of tile maps from Unity to a custom engine did result in some friction. On my part, identifying broken geometry, tweaking collisions, consistently testing, and being in constant communication with the tech team helped us get these levels functional! Getting objects properly rotated was especially difficult to nail down, and even in the final build some of the tiles were never properly rotated.</p>
-  <p>The win state for Specter Inspector, captured from an early engine build.</p>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2024-04-15-202308-1.png" alt="Win state for Specter Inspector" loading="lazy">
+    <figcaption>The win state for Specter Inspector, captured from an early engine build.</figcaption>
+  </figure>
   <h3>Prototyping & Ideation:</h3>
   <p>The fundamental mechanics of Specter Inspector didn't change much through iteration, but behavior of our tools the player would use (the E.M.P & E.M.F devices), as well as the structure and flow of levels did go through many iterations.</p>
-  <p>An early Unity prototype for the view window & player movement.</p>
+  <figure class="media-frame">
+    <img src="assets/bobert.png" alt="Early Unity prototype" loading="lazy">
+    <figcaption>An early Unity prototype for the view window & player movement.</figcaption>
+  </figure>
   <p>The E.M.F device alerted players of nearby specters through visual and audio feedback, which remained mostly the same throughout development. The only substantial changes we made were to make the feedback more obvious and salient to the player.</p>
   <p>The E.M.P device was previously a 'Ghost Zapper', that destroyed ghosts when used on them, however we wanted players to feel scared and inconsequential to the specters they faced. Instead, we opted for this device to stun specters, buying the player a moment to run away, or pass through the specter unharmed. We made this device operated through single use batteries found within the levels, that the player would have to manually load in order to use.</p>
-  <p>A prototype displaying the E.M.F, and an enemy for the player to overcome.</p>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2023-11-28-191225.png" alt="E.M.F prototype with enemy" loading="lazy">
+    <figcaption>A prototype displaying the E.M.F, and an enemy for the player to overcome.</figcaption>
+  </figure>
   <p>The structure of our levels originally was one long level with no checkpoints, which gradually got more difficult. However, this format led to player frustrations, a stressful experience, and uneven pacing. We wanted the player to feel tension, but not overtly stressed to the point of not enjoying the experience. We wanted the player to feel like they were playing a balanced cohesive experience with varying levels and engagement curves, not an unrewarding gauntlet.</p>
   <p>To fix these pacing issues, I decided to separate the game into three distinct levels:</p>
   <ul class="list">
@@ -81,7 +102,10 @@ nav_active: "Portfolio"
     <li>E.M.P Training – E.M.P tool usage & more involved & thoughtful encounter design, climaxing in a challenging ending to the game.</li>
   </ul>
   <p>This way to structure the flow of the game chunked our mechanics into individual, understandable sections of gameplay that allowed us to build tension and engagement in a cohesive manor.</p>
-  <p>View of a full level screen, as seen from the Unity editor.</p>
+  <figure class="media-frame">
+    <img src="assets/screenshot-2024-02-07-153058-1.png" alt="Full level screen from Unity editor" loading="lazy">
+    <figcaption>View of a full level screen, as seen from the Unity editor.</figcaption>
+  </figure>
 </section>
 
 <section class="panel fade-in">
@@ -96,18 +120,4 @@ nav_active: "Portfolio"
   <p>Check out the level spaces I created, and see what the experience is like!</p>
   <p>Linked below is the Steam Page for Specter Inspector:</p>
   <p>Check out the Steam Page, and play Specter Inspector for yourself!</p>
-</section>
-
-<section class="panel gallery-section fade-in">
-  <h2>Screenshots & Media</h2>
-  <div class="archive-grid">
-    <figure class="media-frame"><img src="assets/screenshot-2025-06-27-143934.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/screenshot-2024-04-15-205426.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/spectralsquad.jpg" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/ezgif-6408ef99d34d5c13.gif" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/screenshot-2024-04-15-202308-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/bobert.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/screenshot-2023-11-28-191225.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/screenshot-2024-02-07-153058-1.png" alt="" loading="lazy"></figure>
-  </div>
 </section>
