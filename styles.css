@@ -643,7 +643,7 @@ p {
 
 .media-frame.contain img {
   object-fit: contain;
-  background: rgba(12, 20, 15, 0.96);
+  background: rgba(80, 70, 50, 0.85);
 }
 
 .hero-image-grid {
