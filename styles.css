@@ -293,7 +293,7 @@ p {
 .card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(175deg, rgba(33, 52, 40, 0.84), rgba(22, 34, 27, 0.94));
+  background: linear-gradient(175deg, rgba(15, 28, 48, 0.84), rgba(10, 20, 38, 0.94));
   padding: 1.1rem;
   transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
 }
@@ -319,7 +319,7 @@ p {
 .panel {
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(23, 37, 29, 0.84);
+  background: rgba(15, 28, 48, 0.84);
   padding: 1.1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
@@ -619,7 +619,7 @@ p {
 .gallery details {
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: rgba(23, 37, 29, 0.78);
+  background: rgba(15, 28, 48, 0.78);
   padding: 0.75rem;
   margin-bottom: 0.85rem;
 }
@@ -705,7 +705,7 @@ p {
   display: block;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: linear-gradient(175deg, rgba(33, 52, 40, 0.84), rgba(22, 34, 27, 0.94));
+  background: linear-gradient(175deg, rgba(15, 28, 48, 0.84), rgba(10, 20, 38, 0.94));
   overflow: hidden;
   transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
   text-decoration: none;
@@ -821,7 +821,7 @@ p {
   border-radius: var(--radius-lg);
   background:
     linear-gradient(135deg, rgba(69, 184, 138, 0.08), rgba(212, 184, 64, 0.06)),
-    rgba(23, 37, 29, 0.84);
+    rgba(15, 28, 48, 0.84);
   padding: clamp(1.8rem, 4vw, 2.8rem);
   text-align: center;
   margin-top: 2rem;
