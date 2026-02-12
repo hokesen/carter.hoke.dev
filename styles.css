@@ -577,8 +577,7 @@ p {
 
 .media-frame img {
   width: 100%;
-  height: clamp(190px, 31vw, 400px);
-  object-fit: cover;
+  height: auto;
   display: block;
   transition: transform var(--transition-med);
 }
