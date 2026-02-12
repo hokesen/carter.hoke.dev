@@ -204,7 +204,7 @@ main a:hover {
 }
 
 main {
-  padding: 3rem 0 5rem;
+  padding: 2rem 0 5rem;
 }
 
 /* ---------- Hero ---------- */
@@ -216,7 +216,7 @@ main {
     linear-gradient(145deg, rgba(15, 28, 48, 0.92), rgba(10, 20, 38, 0.96)),
     linear-gradient(115deg, rgba(69, 184, 138, 0.2), transparent 40%);
   box-shadow: var(--shadow);
-  padding: clamp(1.8rem, 4vw, 3rem);
+  padding: clamp(1.3rem, 2vw, 3rem);
   margin-bottom: 2rem;
 }
 
@@ -227,6 +227,8 @@ main {
   background-clip: text;
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
   text-shadow: 0 0 40px rgba(69, 184, 138, 0.3);
   animation: showcase-glow 4s ease-in-out infinite;
 }
@@ -234,7 +236,7 @@ main {
 .hero-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.2rem;
   align-items: center;
 }
 
@@ -591,7 +593,7 @@ p {
 }
 
 .hero-portrait img {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 18%;
 }
