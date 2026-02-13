@@ -5,8 +5,7 @@ description: "Level design portfolio and development blog for Carter Hoke."
 nav_active: ""
 ---
 <style>
-  .project-card-body h3,
-  .showcase-title {
+  .project-card-body h3 {
     text-align: center;
     font-size: clamp(1.95rem, 3.6vw, 2.775rem);
     background: linear-gradient(135deg, #5eedb0, var(--brand-2));
@@ -21,14 +20,42 @@ nav_active: ""
     justify-content: center;
   }
   
+  .project-card-body p {
+    text-align: center;
+  }
+  
   .hero .btn-row {
     justify-content: center;
   }
   
+  .showcase-header-bar {
+    background: rgba(94, 237, 176, 0.1);
+    border-bottom: 2px solid rgba(94, 237, 176, 0.3);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .showcase-header-bar .showcase-title {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: center;
+    background: linear-gradient(135deg, #5eedb0, var(--brand-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: showcase-glow 4s ease-in-out infinite;
+    font-weight: 800;
+  }
+  
   @media (max-width: 960px) {
-    .project-card-body h3,
-    .showcase-title {
+    .project-card-body h3 {
       font-size: clamp(1.5rem, 5vw, 2.775rem);
+    }
+    
+    .showcase-header-bar .showcase-title {
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
     }
   }
 </style>
@@ -80,8 +107,10 @@ nav_active: ""
 </section>
 
 <section class="showcase-section fade-in">
-  <h2 class="showcase-title">Showcase Project:</h2>
   <a class="project-card project-card--featured" href="eyes-of-the-forest.html">
+    <div class="showcase-header-bar">
+      <h2 class="showcase-title">Showcase Project:</h2>
+    </div>
     <div class="project-card-img">
       <img src="assets/eyes-of-the-forest.png" alt="Eyes of the Forest project showcase" loading="lazy" class="project-card-img--contain">
     </div>

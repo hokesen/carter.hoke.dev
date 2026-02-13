@@ -99,9 +99,15 @@ main a:hover {
 
 .brand-title {
   font-family: "Outfit", "Sora", sans-serif;
-  font-size: 1.04rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  background: linear-gradient(135deg, #5eedb0, var(--brand-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: showcase-glow 4s ease-in-out infinite;
+  font-weight: 700;
 }
 
 .brand-subtitle {
@@ -868,10 +874,14 @@ p {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  width: 100%;
+  padding: 0 10%;
+}
+
+.footer-left {
+  flex: 0 0 auto;
 }
 
 .footer-contact {
@@ -879,8 +889,8 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  flex: 1;
-  justify-content: center;
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 .footer-contact-label {
@@ -966,11 +976,6 @@ p {
   .nav {
     justify-content: flex-start;
   }
-
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 @media (max-width: 480px) {
@@ -985,5 +990,14 @@ p {
 
   .tag-row {
     gap: 0.35rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact {
+    align-items: center;
   }
 }
