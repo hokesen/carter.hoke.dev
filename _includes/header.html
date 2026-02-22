@@ -18,16 +18,16 @@
       <div class="nav-item nav-item--has-dropdown">
         <div class="nav-link-row">
           <a href="{{ '/portfolio.html' | relative_url }}"{% if page.nav_active == "Portfolio" %} aria-current="page"{% endif %}>Portfolio</a>
-          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="portfolio-subnav">
+          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="portfolio-subnav" aria-haspopup="true">
             <span class="sr-only">Toggle portfolio submenu</span>
             <span class="nav-chevron" aria-hidden="true">&#9662;</span>
           </button>
         </div>
-        <div class="nav-dropdown" id="portfolio-subnav">
-          <a href="{{ '/eyes-of-the-forest.html' | relative_url }}">Eyes of the Forest</a>
-          <a href="{{ '/barton.html' | relative_url }}">Barton</a>
-          <a href="{{ '/specter-inspector.html' | relative_url }}">Specter Inspector</a>
-          <a href="{{ '/expansive-fantasy-survival.html' | relative_url }}">Expansive Fantasy Survival</a>
+        <div class="nav-dropdown" id="portfolio-subnav" aria-hidden="true">
+          <a href="{{ '/eyes-of-the-forest.html' | relative_url }}"{% if page.url == "/eyes-of-the-forest.html" %} aria-current="page"{% endif %}>Eyes of the Forest</a>
+          <a href="{{ '/barton.html' | relative_url }}"{% if page.url == "/barton.html" %} aria-current="page"{% endif %}>Barton</a>
+          <a href="{{ '/specter-inspector.html' | relative_url }}"{% if page.url == "/specter-inspector.html" %} aria-current="page"{% endif %}>Specter Inspector</a>
+          <a href="{{ '/expansive-fantasy-survival.html' | relative_url }}"{% if page.url == "/expansive-fantasy-survival.html" %} aria-current="page"{% endif %}>Expansive Fantasy Survival</a>
         </div>
       </div>
       <a href="{{ '/about.html' | relative_url }}"{% if page.nav_active == "About" %} aria-current="page"{% endif %}>About</a>
@@ -35,13 +35,13 @@
       <div class="nav-item nav-item--has-dropdown nav-item--right">
         <div class="nav-link-row">
           <a href="{{ '/dev-blog.html' | relative_url }}"{% if page.nav_active == "Dev Blog" %} aria-current="page"{% endif %}>Dev Blog</a>
-          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="dev-blog-subnav">
+          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="dev-blog-subnav" aria-haspopup="true">
             <span class="sr-only">Toggle dev blog submenu</span>
             <span class="nav-chevron" aria-hidden="true">&#9662;</span>
           </button>
         </div>
-        <div class="nav-dropdown" id="dev-blog-subnav">
-          <a href="{{ '/blog/analyzing-scene-compositions-in-barton.html' | relative_url }}">Analyzing Scene Compositions From Barton</a>
+        <div class="nav-dropdown" id="dev-blog-subnav" aria-hidden="true">
+          <a href="{{ '/blog/analyzing-scene-compositions-in-barton.html' | relative_url }}"{% if page.url == "/blog/analyzing-scene-compositions-in-barton.html" %} aria-current="page"{% endif %}>Analyzing Scene Compositions From Barton</a>
         </div>
       </div>
     </nav>

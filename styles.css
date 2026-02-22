@@ -138,6 +138,12 @@ main a:hover {
   border-bottom: 1px solid rgba(60, 101, 144, 0.45);
 }
 
+@supports not (backdrop-filter: blur(1px)) {
+  .site-header {
+    background: rgba(8, 20, 35, 0.95);
+  }
+}
+
 .header-inner {
   display: flex;
   gap: 1rem 1.35rem;
@@ -163,7 +169,6 @@ main a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: showcase-glow 4s ease-in-out infinite;
   font-weight: 700;
 }
 
@@ -257,8 +262,8 @@ main a:hover {
 }
 
 .nav-expand:hover,
-.nav-item.is-open .nav-expand,
-.nav-item:focus-within .nav-expand {
+.nav-expand:focus-visible,
+.nav-item.is-open .nav-expand {
   border-color: rgba(80, 212, 160, 0.5);
   color: var(--text);
   background: rgba(80, 212, 160, 0.16);
@@ -271,9 +276,7 @@ main a:hover {
   display: inline-block;
 }
 
-.nav-item:hover .nav-chevron,
-.nav-item.is-open .nav-chevron,
-.nav-item:focus-within .nav-chevron {
+.nav-item.is-open .nav-chevron {
   transform: rotate(180deg);
   opacity: 1;
 }
@@ -291,9 +294,10 @@ main a:hover {
   border-radius: 12px;
   box-shadow: var(--shadow);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transform: translateY(-4px);
-  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility 0s linear var(--transition-fast);
   z-index: 30;
 }
 
@@ -311,12 +315,12 @@ main a:hover {
   height: 0.5rem;
 }
 
-.nav-item:hover .nav-dropdown,
-.nav-item:focus-within .nav-dropdown,
 .nav-item.is-open .nav-dropdown {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
+  transition-delay: 0s;
 }
 
 .nav-dropdown a {
@@ -335,6 +339,12 @@ main a:hover {
   color: var(--text);
   background: rgba(80, 212, 160, 0.18);
   border: none;
+}
+
+.nav-dropdown a[aria-current="page"] {
+  color: var(--text);
+  background: rgba(80, 212, 160, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(80, 212, 160, 0.38);
 }
 
 a:focus-visible,
@@ -358,8 +368,7 @@ main {
   box-shadow: var(--shadow);
   padding: clamp(1.4rem, 2.2vw, 3.1rem);
   margin-bottom: 2.1rem;
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-  will-change: transform;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   position: relative;
   overflow: hidden;
 }
@@ -391,8 +400,7 @@ main {
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 0.65rem;
-  text-shadow: 0 0 40px rgba(69, 184, 138, 0.3);
-  animation: showcase-glow 4s ease-in-out infinite;
+  text-shadow: 0 0 28px rgba(69, 184, 138, 0.2);
   text-wrap: balance;
 }
 
@@ -470,13 +478,28 @@ article > p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: showcase-glow 4s ease-in-out infinite;
 }
 
 .max-content {
   max-width: var(--content-max);
   margin-left: auto;
   margin-right: auto;
+}
+
+.longform {
+  max-width: min(78ch, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.longform p,
+.longform li {
+  max-width: none;
+}
+
+.longform > :last-child {
+  margin-bottom: 0;
 }
 
 /* ---------- Grid ---------- */
@@ -680,6 +703,7 @@ article > p {
   font-weight: 700;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
+  min-height: 44px;
   color: var(--text);
   transition: var(--transition-fast);
   position: relative;
@@ -1066,6 +1090,11 @@ figcaption {
   color: inherit;
 }
 
+.project-card:focus-visible {
+  outline: 2px solid rgba(80, 212, 160, 0.85);
+  outline-offset: 3px;
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 24px 55px rgba(0, 0, 0, 0.45), 0 0 35px var(--brand-glow);
@@ -1205,12 +1234,6 @@ figcaption {
   margin: 0 0 1.2rem;
   letter-spacing: 0.02em;
   text-align: center;
-  animation: showcase-glow 4s ease-in-out infinite;
-}
-
-@keyframes showcase-glow {
-  0%, 100% { opacity: 0.88; text-shadow: 0 0 30px rgba(69, 184, 138, 0.2); }
-  50% { opacity: 1; text-shadow: 0 0 50px rgba(69, 184, 138, 0.35); }
 }
 
 .cta-block {
@@ -1249,7 +1272,7 @@ figcaption {
 .site-footer {
   border-top: 1px solid rgba(184, 199, 179, 0.24);
   background: linear-gradient(180deg, rgba(10, 22, 38, 0.66), rgba(10, 22, 38, 0.86));
-  padding: 1.4rem 0 2rem;
+  padding: clamp(1.8rem, 3vw, 2.4rem) 0 clamp(2.4rem, 4.2vw, 3.2rem);
   color: var(--muted);
   font-size: 0.9rem;
 }
@@ -1259,8 +1282,8 @@ figcaption {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   gap: 0.8rem 1.2rem;
+  padding-inline: clamp(0.9rem, 2.4vw, 1.8rem);
 }
 
 .footer-left {
@@ -1318,12 +1341,17 @@ figcaption {
 /* ---------- Scroll Animation ---------- */
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
+  opacity: 1;
+  transform: none;
   transition: opacity 550ms ease, transform 550ms ease;
 }
 
-.fade-in.visible {
+.js .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.js .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1500,7 +1528,7 @@ figcaption {
     transition-duration: 0.01ms !important;
   }
 
-  .fade-in {
+  .js .fade-in {
     opacity: 1;
     transform: none;
   }
@@ -1537,6 +1565,7 @@ figcaption {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-inline: clamp(0.85rem, 5vw, 1.25rem);
   }
 
   .footer-contact {
