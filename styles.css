@@ -360,13 +360,14 @@ main {
 /* ---------- Hero ---------- */
 
 .hero {
+  --hero-pad: clamp(1.4rem, 2.2vw, 3.1rem);
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 10px);
   background:
     linear-gradient(145deg, rgba(15, 28, 48, 0.95), rgba(9, 19, 35, 0.95)),
     radial-gradient(circle at 90% 20%, rgba(80, 212, 160, 0.22), transparent 36%);
   box-shadow: var(--shadow);
-  padding: clamp(1.4rem, 2.2vw, 3.1rem);
+  padding: var(--hero-pad);
   margin-bottom: 2.1rem;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   position: relative;
@@ -935,6 +936,41 @@ figcaption {
   transform: none;
 }
 
+@media (min-width: 961px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero-split {
+    gap: clamp(1rem, 2.2vw, 1.9rem);
+    align-items: stretch;
+  }
+
+  .hero-split > :first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--hero-pad) 0 var(--hero-pad) var(--hero-pad);
+  }
+
+  .hero .hero-portrait {
+    margin: 0;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .hero .hero-portrait img {
+    height: 100%;
+    min-height: clamp(460px, 44vw, 720px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 18%;
+  }
+}
+
 .media-frame iframe,
 .media-embed {
   width: 100%;
@@ -1272,7 +1308,7 @@ figcaption {
 .site-footer {
   border-top: 1px solid rgba(184, 199, 179, 0.24);
   background: linear-gradient(180deg, rgba(10, 22, 38, 0.66), rgba(10, 22, 38, 0.86));
-  padding: clamp(1.8rem, 3vw, 2.4rem) 0 clamp(2.4rem, 4.2vw, 3.2rem);
+  padding: clamp(2.1rem, 3.8vw, 2.9rem) 0 clamp(2.8rem, 5vw, 3.8rem);
   color: var(--muted);
   font-size: 0.9rem;
 }
@@ -1282,8 +1318,10 @@ figcaption {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.8rem 1.2rem;
-  padding-inline: clamp(0.9rem, 2.4vw, 1.8rem);
+  gap: 1rem 1.6rem;
+  width: min(var(--max), 96vw);
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 2.8vw, 2.1rem);
 }
 
 .footer-left {
@@ -1565,7 +1603,8 @@ figcaption {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding-inline: clamp(0.85rem, 5vw, 1.25rem);
+    width: min(var(--max), 94vw);
+    padding-inline: clamp(1rem, 5.5vw, 1.4rem);
   }
 
   .footer-contact {
