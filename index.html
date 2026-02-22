@@ -3,62 +3,8 @@ layout: default
 title: "Carter Hoke | Level Design Portfolio"
 description: "Level design portfolio and development blog for Carter Hoke."
 nav_active: ""
+og_image: "/assets/carterferry-edited-1.webp"
 ---
-<style>
-  .project-card-body h3 {
-    text-align: center;
-    font-size: clamp(1.95rem, 3.6vw, 2.775rem);
-    background: linear-gradient(135deg, #5eedb0, var(--brand-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-weight: 800;
-  }
-  
-  .project-card-body .tag-row {
-    justify-content: center;
-  }
-  
-  .project-card-body p {
-    text-align: center;
-  }
-  
-  .hero .btn-row {
-    justify-content: center;
-  }
-  
-  .showcase-header-bar {
-    background: rgba(94, 237, 176, 0.1);
-    border-bottom: 2px solid rgba(94, 237, 176, 0.3);
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .showcase-header-bar .showcase-title {
-    margin: 0;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    text-align: center;
-    background: linear-gradient(135deg, #5eedb0, var(--brand-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-weight: 800;
-  }
-  
-  @media (max-width: 960px) {
-    .project-card-body h3 {
-      font-size: clamp(1.5rem, 5vw, 2.775rem);
-    }
-    
-    .showcase-header-bar .showcase-title {
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
-    }
-  }
-</style>
 <section class="hero fade-in">
   <div class="hero-split">
     <div>
@@ -66,23 +12,33 @@ nav_active: ""
       <p>
         Carter is a level designer focused on creating and designing experiences driven by user feedback, and team collaboration. With excellent written and verbal communication skills, and a constant drive to improve projects through iterative design, Carter approaches each project with adaptability and empathy for the user. Born and raised in the Pacific Northwest, Carter is currently studying game design at DigiPen Institute of Technology, specializing in Level Design and User Research, with an expected graduation date of April 2026.
       </p>
-      <div class="btn-row">
+      <div class="btn-row btn-row--center">
         <a class="btn btn--secondary" href="mailto:carterhoke@gmail.com">carterhoke@gmail.com</a>
-        <a class="btn btn--secondary" href="https://www.linkedin.com/in/carter-hoke-46943325a/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--secondary" href="https://www.linkedin.com/in/carter-hoke-46943325a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
     <div>
       <figure class="media-frame hero-portrait">
-        <img src="assets/carterferry-edited-1.jpeg" alt="Carter Hoke portrait" loading="lazy">
+        <img
+          src="assets/carterferry-edited-1.webp"
+          srcset="assets/carterferry-edited-1-640.webp 640w, assets/carterferry-edited-1-960.webp 960w, assets/carterferry-edited-1.webp 1820w"
+          sizes="(max-width: 960px) 92vw, 42vw"
+          alt="Carter Hoke portrait"
+          width="1820"
+          height="1365"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
       </figure>
     </div>
   </div>
 </section>
 
 <section class="grid grid-2 fade-in">
-  <a class="project-card project-card--featured" href="portfolio.html">
+  <a class="project-card project-card--featured project-card--center project-card--display" href="portfolio.html">
     <div class="project-card-img">
-      <img src="assets/carter_world_overview-256.png" alt="Design Portfolio" loading="lazy">
+      <img src="assets/carter_world_overview-256.webp" alt="Design Portfolio" loading="lazy" decoding="async" width="4096" height="4096">
     </div>
     <div class="project-card-body">
       <h3>Level Design Portfolio</h3>
@@ -92,12 +48,12 @@ nav_active: ""
         <span class="tag">Level Design Process</span>
         <span class="tag tag--gold">2 Projects Shipped to Steam</span>
       </div>
-      <p>Explore various academic cross disciplinary team projects, and solo project endeavors that dive into my level design process!</p>
+      <p>Explore academic cross-disciplinary team projects and solo project work that highlight my level design process.</p>
     </div>
   </a>
-  <a class="project-card project-card--featured" href="dev-blog.html">
+  <a class="project-card project-card--featured project-card--center project-card--display" href="dev-blog.html">
     <div class="project-card-img">
-      <img src="assets/thumbnail.png" alt="Development Blog" loading="lazy">
+      <img src="assets/thumbnail.webp" alt="Development Blog" loading="lazy" decoding="async" width="978" height="550">
     </div>
     <div class="project-card-body">
       <h3>Dev Blog</h3>
@@ -107,12 +63,12 @@ nav_active: ""
 </section>
 
 <section class="showcase-section fade-in">
-  <a class="project-card project-card--featured" href="eyes-of-the-forest.html">
+  <a class="project-card project-card--featured project-card--center project-card--display" href="eyes-of-the-forest.html">
     <div class="showcase-header-bar">
       <h2 class="showcase-title">Showcase Project:</h2>
     </div>
     <div class="project-card-img">
-      <img src="assets/eyes-of-the-forest.png" alt="Eyes of the Forest project showcase" loading="lazy" class="project-card-img--contain">
+      <img src="assets/eyes-of-the-forest.webp" alt="Eyes of the Forest project showcase" loading="lazy" decoding="async" class="project-card-img--contain" width="1920" height="1080">
     </div>
     <div class="project-card-body">
       <h3>Eyes of the Forest</h3>

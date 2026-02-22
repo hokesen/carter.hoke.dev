@@ -1,87 +1,25 @@
 ---
 layout: default
 title: "Level Design Portfolio | Carter Hoke"
+description: "Case studies and project breakdowns highlighting Carter Hoke's level design and user research process."
 nav_active: "Portfolio"
+og_image: "/assets/eyes-of-the-forest.webp"
 ---
-<style>
-  .project-card-body h3 {
-    text-align: center;
-    font-size: clamp(1.95rem, 3.6vw, 2.775rem);
-    background: linear-gradient(135deg, #5eedb0, var(--brand-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-weight: 800;
-  }
-  
-  .project-card-body .tag-row {
-    justify-content: center;
-  }
-  
-  .project-card-body p {
-    text-align: center;
-  }
-  
-  .hero {
-    text-align: center;
-  }
-  
-  .panel {
-    text-align: center;
-  }
-  
-  .featured-list {
-    display: inline-block;
-    text-align: left;
-  }
-  
-  .showcase-header-bar {
-    background: rgba(94, 237, 176, 0.1);
-    border-bottom: 2px solid rgba(94, 237, 176, 0.3);
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .showcase-header-bar .showcase-title {
-    margin: 0;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    text-align: center;
-    background: linear-gradient(135deg, #5eedb0, var(--brand-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-weight: 800;
-  }
-  
-  @media (max-width: 960px) {
-    .project-card-body h3 {
-      font-size: clamp(1.5rem, 5vw, 2.775rem);
-    }
-    
-    .showcase-header-bar .showcase-title {
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
-    }
-  }
-</style>
-<section class="hero fade-in">
+<section class="hero fade-in section-center">
   <h1>Level Design Portfolio</h1>
   <h2>Level Design, Driven by User Understanding.</h2>
   <p>Explore the various game projects I've contributed to!</p>
-  <p>Dive into my process as a level designer, and see how the lesson's I've learned define my skills and capabilities to handle ambitious cross-disciplinary team projects!</p>
+  <p>Dive into my process as a level designer, and see how the lessons I've learned define my skills and capabilities for ambitious cross-disciplinary team projects.</p>
   <p>Have fun exploring, and I hope you learn something!</p>
 </section>
 
 <section class="grid fade-in">
-  <a class="project-card project-card--featured" href="eyes-of-the-forest.html">
+  <a class="project-card project-card--featured project-card--center project-card--display" href="eyes-of-the-forest.html">
     <div class="showcase-header-bar">
       <h2 class="showcase-title">Showcase Project:</h2>
     </div>
     <div class="project-card-img">
-      <img src="assets/eyes-of-the-forest.png" alt="Eyes of the Forest" loading="lazy" class="project-card-img--contain">
+      <img src="assets/eyes-of-the-forest.webp" alt="Eyes of the Forest" loading="eager" fetchpriority="high" decoding="async" class="project-card-img--contain" width="1920" height="1080">
     </div>
     <div class="project-card-body">
       <h3>Eyes of the Forest</h3>
@@ -92,15 +30,15 @@ nav_active: "Portfolio"
         <span class="tag">User Research</span>
         <span class="tag tag--gold">Releasing on Steam</span>
       </div>
-      <p>Take a peek into my showcase project, Eyes of the Forest, Where I served as a level designer, and encounter designer.</p>
+      <p>Take a peek into my showcase project, Eyes of the Forest, where I serve as a level designer and encounter designer.</p>
     </div>
   </a>
 </section>
 
 <section class="grid grid-2 fade-in">
-  <a class="project-card" href="specter-inspector.html">
+  <a class="project-card project-card--center project-card--display" href="specter-inspector.html">
     <div class="project-card-img">
-      <img src="assets/screenshot-2024-04-15-205426.png" alt="Specter Inspector" loading="lazy">
+      <img src="assets/screenshot-2024-04-15-205426.webp" alt="Specter Inspector" loading="lazy" decoding="async" width="1920" height="1014">
     </div>
     <div class="project-card-body">
       <h3>Specter Inspector</h3>
@@ -115,9 +53,9 @@ nav_active: "Portfolio"
       <p>Discover my 2D level design, and encounter design process, while working within a custom engine for Specter Inspector. Shipped to Steam August 2025.</p>
     </div>
   </a>
-  <a class="project-card" href="barton.html">
+  <a class="project-card project-card--center project-card--display" href="barton.html">
     <div class="project-card-img">
-      <img src="assets/barton-screenshot-2025.04.11-22.33.06.49-1.png" alt="Barton" loading="lazy">
+      <img src="assets/barton-screenshot-2025.04.11-22.33.06.49-1.webp" alt="Barton" loading="lazy" decoding="async" width="3095" height="1740">
     </div>
     <div class="project-card-body">
       <h3>Barton</h3>
@@ -133,9 +71,9 @@ nav_active: "Portfolio"
 </section>
 
 <section class="grid fade-in">
-  <a class="project-card" href="expansive-fantasy-survival.html">
+  <a class="project-card project-card--center project-card--display" href="expansive-fantasy-survival.html">
     <div class="project-card-img">
-      <img src="assets/carter_world_nw-2560.png" alt="Expansive Fantasy Survival" loading="lazy">
+      <img src="assets/carter_world_nw-2560.webp" alt="Expansive Fantasy Survival" loading="lazy" decoding="async" width="1920" height="1080">
     </div>
     <div class="project-card-body">
       <h3>Expansive Fantasy Survival</h3>
@@ -145,7 +83,7 @@ nav_active: "Portfolio"
         <span class="tag tag--gold">1,900+ Downloads</span>
         <span class="tag">86 sq mi of Custom Minecraft Terrain</span>
       </div>
-      <p>Immerse yourself in my solo passion project, Expansive Fantasy Survival, where I sculpted a massive and intricate Minecraft world over the course of two and a half years. Available to downlod for free.</p>
+      <p>Immerse yourself in my solo passion project, Expansive Fantasy Survival, where I sculpted a massive and intricate Minecraft world over the course of two and a half years. Available to download for free.</p>
     </div>
   </a>
 </section>
