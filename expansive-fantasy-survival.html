@@ -1,139 +1,79 @@
 ---
 layout: default
 title: "Expansive Fantasy Survival | Carter Hoke"
+description: "Solo worldbuilding case study for Expansive Fantasy Survival, covering terrain pipeline, iteration, and final release."
 nav_active: "Portfolio"
+og_image: "/assets/carter_world_overview-256.webp"
 ---
-<style>
-  .hero h1,
-  .panel h2 {
-    text-align: center;
-  }
-  
-  .panel h2 {
-    background: linear-gradient(135deg, var(--brand), #e2f0db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-size: clamp(1.8rem, 4.3vw, 3.3rem);
-    font-family: "Outfit", "Sora", sans-serif;
-    line-height: 1.2;
-    margin: 0 0 0.7rem;
-  }
-  
-  .hero h2,
-  .hero h3,
-  .panel h3 {
-    text-align: center;
-    font-size: clamp(1.3rem, 2.4vw, 1.85rem);
-  }
-  
-  figcaption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 1rem;
-    padding-top: 0.5rem;
-  }
-  
-  .archive-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .archive-grid .media-frame {
-    width: 100%;
-  }
-  
-  .archive-grid .media-frame img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .kpi-row {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero h3,
-  .panel h3 {
-    margin-top: 2rem;
-  }
-  
-  @media (max-width: 480px) {
-    .kpi-row {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-<script>
-  // Override tilt intensity for this page's longer hero block
-  (function() {
-    // Wait for the default script to run first
-    setTimeout(function() {
-      var hero = document.querySelector(".hero");
-      if (!hero) return;
-
-      var MAX_TILT = 0.5; // Extra gentle for longer block
-
-      hero.addEventListener("mousemove", function (e) {
-        var rect = hero.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width * 2 - 1;
-        var y = (e.clientY - rect.top) / rect.height * 2 - 1;
-
-        var rotY = x * MAX_TILT;
-        var rotX = -y * MAX_TILT;
-
-        hero.style.transform =
-          "perspective(800px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
-      });
-    }, 100);
-  })();
-</script>
-<section class="hero fade-in">
+<section class="hero fade-in section-center-headings" id="overview">
   <h1>Expansive Fantasy Survival</h1>
-  <h2>What is Expansive Fantasy Survival?</h2>
-  <p>Expansive Fantasy Survival was a solo project where I set out to make a massive fantasy themed Minecraft map, for anybody to use and explore!</p>
-  <p>This Minecraft map was made solely by me over the course of two and a half years, and is now accessible to all for free!</p>
-  <p>Expansive Fantasy Survival was mostly built in a software called world painter, with many custom brushes, structures, and iteration to shape this unique world. About half of the custom structures are schematics I made personally, and I made a variety of custom trees as well! Once landscaping was complete, I used the world edit plugin to tweak a few things, and add a few more structures by hand throughout the map.</p>
-  <p>This world is 15k x 15k Minecraft blocks wide, which translates to roughly 86 square miles of terrain!</p>
-  <p>I have been making Minecraft maps like this for around ten years now, and this map is the culmination of all my world painter, building, map making knowledge, and game design principles, and all tied together with a cohesive theme.</p>
-  <h3>Watch the trailer for Expansive Fantasy Survival:</h3>
+  <h2>What Is Expansive Fantasy Survival?</h2>
+  <p class="section-summary">A solo worldbuilding project focused on large-scale terrain composition, environmental storytelling, and exploration flow across a handcrafted 15k x 15k world.</p>
+  <p>Expansive Fantasy Survival is a free fantasy-themed Minecraft map built over 2.5 years.</p>
+  <p>The world was primarily sculpted in WorldPainter with custom brushes, structures, and biome-level iteration, then refined in-engine with WorldEdit and hand-authored landmarks.</p>
+  <p>The final map spans roughly 86 square miles of custom terrain.</p>
+  <h3>Trailer</h3>
   <figure class="media-frame">
-    <iframe src="https://www.youtube.com/embed/yfiZiR8x4FI?rel=1&showinfo=1&fs=1" title="Expansive Fantasy Survival Trailer" style="width:100%; aspect-ratio:16/9; border:0;" allowfullscreen loading="lazy"></iframe>
+    <iframe class="media-embed" src="https://www.youtube.com/embed/yfiZiR8x4FI?rel=1&showinfo=1&fs=1" title="Expansive Fantasy Survival trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
   </figure>
 </section>
 
-<div class="kpi-row fade-in">
-  <div class="kpi"><strong>Solo Development</strong></div>
-  <div class="kpi"><strong>2.5 Year Project</strong></div>
-  <div class="kpi"><strong>86 sq mi of Terrain</strong></div>
-  <div class="kpi"><strong>1,900+ Downloads</strong></div>
-</div>
+<div class="project-layout fade-in">
+  <aside class="panel page-toc" aria-label="Expansive Fantasy Survival page outline">
+    <h2>On This Page</h2>
+    <ol class="list">
+      <li><a href="#overview">Project Overview</a></li>
+      <li><a href="#process">Development Process</a></li>
+      <li><a href="#renders">World Renders</a></li>
+      <li><a href="#project-navigation">Project Navigation</a></li>
+    </ol>
+    <p class="caption">Quickly jump to process notes and renders.</p>
+  </aside>
 
-<section class="panel fade-in">
-  <h2>Solo Development Process:</h2>
-  <ul class="list">
-    <li>Ideation & top down planning. What are all the biomes I want to include? How will they geographically tie together? Rivers? Canyons? Old forgotten highways? What is the scope? How do I reasonably make a world of this proportion feel populated, and not like an empty canvas?</li>
-    <li>Creating the basic world layout in WorldPainter. World painter is a top down software that allows you to use brushes to sculpt terrain, import schematics, and generally create the shape and vibe of your world! Outlining each biome was chunked over many weeks, as I wanted to give each section equal attention and effort.</li>
-    <li>Testing and iterating ad nauseum. When a section of the map was at a decent enough point, I would export it into Minecraft, fly around, take notes on problematic areas, what worked, and what could be improved upon further edits. This was done hundreds of times, across each area of the game, to ensure overall quality and presentation was cohesive, in every corner of the world!</li>
-    <li>Taking some time away, and coming back for final polish. I took a number of months off of working on this project, and when I did come back to it, I felt reinvigorated and motivated to push it across the finish line. Some of the final polish included: Implementing environmental storytelling. This includes adding structures to the map. Old buildings, ancient ruins, pathways, bustling villages, all tell a story and give previously empty spaces more meaning and purpose. What happened here? What can the user discover and derive their own meaning from? Place more meaningful landmarks. An empty ocean? Let's make it frigid with icebergs, it's more fun to sail across that way anyhow! Empty canyon floors? Lets add old highways that lead the player directly to new areas and landmarks to survey. This makes horse travel a viable option across.</li>
-    <li>Knowing when to call it quits: Art is never finished, only abandoned. knowing when to finally leave your work behind (especially when it is self paced) can be very difficult. Which is why the project took numerous years to finish in the first place. That being said, once each area was polished and meaningfully improved upon, it was a great relief to take my hands off of it, and publish my world for anybody to experience! One of the last steps here was to brand the world, and upload it to one of the most popular Minecraft map hosting sites, Planet Minecraft. This project had an unofficial name throughout development, so I had to settle on a final title for the world. What would describe the whimsical, large scale, and survival mode friendly aspects of this world? So after some deliberation, Expansive Fantasy Survival was given it's identity.</li>
-  </ul>
-  <h3>Here is the official site where Expansive Fantasy Survival can be downloaded:</h3>
-  <p style="text-align: center;"><a href="https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map" target="_blank" rel="noreferrer">https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map</a></p>
-</section>
+  <div class="project-flow">
+    <div class="kpi-row kpi-row--centered">
+      <div class="kpi"><strong>Solo Development</strong></div>
+      <div class="kpi"><strong>2.5 Year Project</strong></div>
+      <div class="kpi"><strong>86 sq mi Terrain</strong></div>
+      <div class="kpi"><strong>1,900+ Downloads</strong></div>
+    </div>
 
-<section class="panel fade-in">
-  <h2>World Renders</h2>
-  <div class="archive-grid">
-    <figure class="media-frame contain"><img src="assets/carter_world_overview-256.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame contain"><img src="assets/carter_world_nw-2560.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame contain"><img src="assets/carter_world_ne-4096.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame contain"><img src="assets/carter_world_sw-1536.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame contain"><img src="assets/oceanlowres.webp" alt="" loading="lazy"></figure>
+    <section class="panel section-center-headings" id="process">
+      <h2>Solo Development Process</h2>
+      <p class="section-summary">This pipeline combined macro planning, constant in-engine review, and late-phase world polish to keep readability and exploration value high across the full map.</p>
+      <ul class="list">
+        <li><strong>Top-down planning:</strong> Defined biome distribution, travel routes, landmarks, and map-level pacing before major terrain sculpting.</li>
+        <li><strong>Terrain blocking in WorldPainter:</strong> Iterated biome borders, elevation flow, and structural placement over many production passes.</li>
+        <li><strong>High-frequency playtesting:</strong> Exported and tested sections repeatedly in Minecraft to evaluate navigation clarity and visual cohesion.</li>
+        <li><strong>Final polish pass:</strong> Added roads, ruins, villages, and storytelling landmarks to reduce dead space and reinforce world identity.</li>
+        <li><strong>Scope closure:</strong> Finalized naming, packaging, and public release once each region met quality and cohesion goals.</li>
+      </ul>
+      <h3>Download Page</h3>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--secondary" href="https://www.planetminecraft.com/project/expansive-fantasy-survival-15k-x-15k-adventure-survival-map" target="_blank" rel="noopener noreferrer">View on Planet Minecraft</a>
+      </div>
+    </section>
+
+    <section class="panel section-center-headings" id="renders">
+      <h2>World Renders</h2>
+      <p class="section-summary">High-level render set showcasing world composition across major quadrants and biomes.</p>
+      <div class="archive-grid archive-grid--stack">
+        <figure class="media-frame contain"><img src="assets/carter_world_overview-256.webp" alt="Expansive Fantasy Survival world overview render" loading="lazy" decoding="async" width="4096" height="4096"></figure>
+        <figure class="media-frame contain"><img src="assets/carter_world_nw-2560.webp" alt="Expansive Fantasy Survival northwest world render" loading="lazy" decoding="async" width="1920" height="1080"></figure>
+        <figure class="media-frame contain"><img src="assets/carter_world_ne-4096.webp" alt="Expansive Fantasy Survival northeast world render" loading="lazy" decoding="async" width="1920" height="1080"></figure>
+        <figure class="media-frame contain"><img src="assets/carter_world_sw-1536.webp" alt="Expansive Fantasy Survival southwest world render" loading="lazy" decoding="async" width="1920" height="1080"></figure>
+        <figure class="media-frame contain"><img src="assets/oceanlowres.webp" alt="Expansive Fantasy Survival ocean environment render" loading="lazy" decoding="async" width="800" height="450"></figure>
+      </div>
+    </section>
+
+    <section class="panel project-wayfinding section-center" id="project-navigation">
+      <h2>Explore More Projects</h2>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--tertiary" href="portfolio.html">Back to Portfolio</a>
+        <a class="btn btn--secondary" href="specter-inspector.html">Previous: Specter Inspector</a>
+        <a class="btn btn--secondary" href="eyes-of-the-forest.html">Next: Eyes of the Forest</a>
+        <a class="btn btn--tertiary" href="#overview">Back to Top</a>
+      </div>
+    </section>
   </div>
-</section>
+</div>

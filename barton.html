@@ -1,147 +1,122 @@
 ---
 layout: default
 title: "Barton | Carter Hoke"
+description: "Barton case study covering level design, user research, and production workflow in a UE5 sci-fi puzzle adventure."
 nav_active: "Portfolio"
+og_image: "/assets/barton-screenshot-2025.04.11-22.24.57.34.webp"
 ---
-<style>
-  .hero h1,
-  .panel h2 {
-    text-align: center;
-  }
-  
-  .panel h2 {
-    background: linear-gradient(135deg, var(--brand), #e2f0db);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: showcase-glow 4s ease-in-out infinite;
-    font-size: clamp(1.8rem, 4.3vw, 3.3rem);
-    font-family: "Outfit", "Sora", sans-serif;
-    line-height: 1.2;
-    margin: 0 0 0.7rem;
-  }
-  
-  .hero h2,
-  .panel h3 {
-    text-align: center;
-    font-size: clamp(1.3rem, 2.4vw, 1.85rem);
-  }
-  
-  figcaption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 1rem;
-    padding-top: 0.5rem;
-  }
-  
-  .kpi-row {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  @media (max-width: 480px) {
-    .kpi-row {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-<section class="hero fade-in">
+<section class="hero fade-in section-center-headings" id="overview">
   <h1>Barton</h1>
-  <h2>What is Barton?</h2>
-  <p>A sci-fi themed puzzle adventure, where the player has an open dialogue with a companion bot named Barton.</p>
-  <p>Barton's open dialogue functionality is driven from a Large Language Learning Model (Chat GTP 4o mini). Through player input and prompts, you and Barton can discuss anything, and build a connection together. What kind of relationship will you develop, while seeking to escape this desolate desert planet?</p>
-  <p>21 person academic game team, created in Unreal Engine 5.</p>
-  <p>Generative AI was solely used to create text responses based on player inputs. All design, art, programming, or otherwise was proudly done by members of our game team, Wise Reply.</p>
-  <p>Interior & Exterior level spaces in Barton.</p>
+  <h2>What Is Barton?</h2>
+  <p class="section-summary">A first-person sci-fi puzzle adventure built in Unreal Engine 5, centered on cooperation with an AI companion through open dialogue and shared gameplay goals.</p>
+  <p>A sci-fi themed puzzle adventure where the player builds a relationship with a companion bot named Barton.</p>
+  <p>Barton's dialogue is powered by a large language model (ChatGPT 4o mini). Through prompts and player inputs, you and Barton can discuss objectives, make decisions together, and shape the tone of the journey.</p>
+  <p>Built by a 21-person academic team in Unreal Engine 5.</p>
+  <p>Generative AI was only used for text responses. All design, art, programming, and production work was created by our team, Wise Reply.</p>
   <figure class="media-frame">
-    <img src="assets/barton-screenshot-2025.04.11-22.24.57.34.png" alt="Barton">
+    <img src="assets/barton-screenshot-2025.04.11-22.24.57.34.webp" alt="Barton exterior environment" loading="eager" fetchpriority="high" decoding="async" width="2560" height="1440">
   </figure>
 </section>
 
-<div class="kpi-row fade-in">
-  <div class="kpi"><strong>21 Person Team</strong></div>
-  <div class="kpi"><strong>Unreal Engine 5</strong></div>
-  <div class="kpi"><strong>8 Months of Development</strong></div>
+<div class="project-layout fade-in">
+  <aside class="panel page-toc" aria-label="Barton page outline">
+    <h2>On This Page</h2>
+    <ol class="list">
+      <li><a href="#overview">Project Overview</a></li>
+      <li><a href="#roles">Roles & Responsibilities</a></li>
+      <li><a href="#process">Level Design Process</a></li>
+      <li><a href="#details">Production Details</a></li>
+      <li><a href="#media">Screenshots & Media</a></li>
+      <li><a href="#project-navigation">Project Navigation</a></li>
+    </ol>
+    <p class="caption">Use these links to jump directly to major sections.</p>
+  </aside>
+
+  <div class="project-flow">
+    <div class="kpi-row kpi-row--three kpi-row--centered">
+      <div class="kpi"><strong>21 Person Team</strong></div>
+      <div class="kpi"><strong>Unreal Engine 5</strong></div>
+      <div class="kpi"><strong>8 Months of Development</strong></div>
+    </div>
+
+    <section class="panel section-center-headings" id="roles">
+      <h2>My Roles</h2>
+      <p class="section-summary">I served as the sole level designer and a qualitative user researcher, owning spatial flow while using weekly player feedback to refine readability and pacing.</p>
+      <h3>Sole Level Designer</h3>
+      <p>As the only level designer on the project, I owned the layout, pacing, and puzzle framing for both interior and exterior spaces.</p>
+      <p>I coordinated closely with design and tech teammates so level changes would support Barton’s AI behavior, puzzle readability, and traversal reliability.</p>
+      <p>I also partnered with environment artists at both macro and micro scales to align composition, architecture, and gameplay beats.</p>
+      <h3>Qualitative User Researcher</h3>
+      <p>I ran weekly playtests using participant observation and semi-structured interviews, primarily with convenience-sampled peers and friends.</p>
+      <p>These sessions gave me recurring insight into navigation clarity, puzzle comprehension, and emotional tone across the player journey.</p>
+      <p>I also ran two focused studies: one on readability and flow over time, and one comparing briefed players versus blind players.</p>
+      <div class="media-grid">
+        <figure class="media-frame"><img src="assets/psy-poster-2.png" alt="Research poster comparing briefed and blind players" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/ur-poster.png" alt="Research poster tracking level flow and goals over time" loading="lazy" decoding="async"></figure>
+      </div>
+      <p>The briefed-vs-blind study showed no significant differences in key outcomes.</p>
+      <p>The flow-over-time study showed April 2025 playtesters had clearer goals and easier navigation than March 2025 playtesters.</p>
+    </section>
+
+    <section class="panel section-center-headings" id="process">
+      <h2>Level Design Process</h2>
+      <p class="section-summary">My process combined encounter prototyping, player-path tuning, and repeated readability passes to keep guidance clear without removing player agency.</p>
+      <figure class="media-frame">
+        <img src="assets/facilityy.webp" alt="Barton facility level walkthrough" loading="lazy" decoding="async">
+      </figure>
+      <p>For a deeper look at composition and shot framing in these spaces, see the dev blog post on Barton scene composition.</p>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--secondary" href="blog/analyzing-scene-compositions-in-barton.html">Read The Barton Composition Breakdown</a>
+      </div>
+    </section>
+
+    <section class="panel section-center-headings" id="details">
+      <h2>Production Details</h2>
+      <p class="section-summary">Barton was developed across two academic semesters, with cross-discipline collaboration focused on AI affordances, puzzle progression, and environmental readability.</p>
+      <h3>Scope</h3>
+      <p>Barton was developed over roughly 30 weeks in Unreal Engine 5 by a team of 20: 5 designers, 5 programmers, 9 artists, and 1 sound designer.</p>
+      <p>The project goal was to create a narrative puzzle journey where players build rapport with Barton while navigating a desolate research facility.</p>
+      <p>The experience prioritized cooperation and emotional connection over high mechanical difficulty.</p>
+      <figure class="media-frame">
+        <img src="assets/barton-screenshot-2025.04.11-00.59.12.61.png" alt="Barton puzzle gameplay sequence" loading="lazy" decoding="async" width="2560" height="1440">
+      </figure>
+      <h3>Team Collaboration</h3>
+      <p>I worked with designers to define Barton’s affordances, interaction vocabulary, and puzzle-context behavior.</p>
+      <p>I partnered with programmers and technical designers to ensure every intended player solution remained stable as levels evolved.</p>
+      <p>I also collaborated closely with environment art to preserve gameplay clarity while integrating final art assets.</p>
+      <div class="media-grid">
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.33.06.49.png" alt="Barton final canyon environment screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.18.58.47.png" alt="Barton final interior environment screenshot" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+    <section class="panel gallery-section section-center-headings" id="media">
+      <h2>Screenshots & Media</h2>
+      <p class="section-summary">A selected visual archive from final and near-final builds.</p>
+      <div class="archive-grid">
+        <figure class="media-frame"><img src="assets/facilityy.webp" alt="Barton facility walkthrough clip" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.24.57.34.webp" alt="Barton exterior environment screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.18.58.47.png" alt="Barton interior environment screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.55.53.09-1.png" alt="Barton puzzle space screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/psy-poster-2.png" alt="Barton user research poster" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/ur-poster.png" alt="Barton level flow research poster" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.59.12.61.png" alt="Barton player-and-companion puzzle interaction screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/screenshot-2025-04-02-204501.png" alt="Barton playtest screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.33.06.49.png" alt="Barton canyon route screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.54.03.69-1.png" alt="Barton facility entrance screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.59.12.61-1.png" alt="Barton interior puzzle room screenshot" loading="lazy" decoding="async"></figure>
+        <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-01.09.25.40.png" alt="Barton traversal and climbing screenshot" loading="lazy" decoding="async"></figure>
+      </div>
+    </section>
+
+    <section class="panel project-wayfinding section-center" id="project-navigation">
+      <h2>Explore More Projects</h2>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--tertiary" href="portfolio.html">Back to Portfolio</a>
+        <a class="btn btn--secondary" href="eyes-of-the-forest.html">Previous: Eyes of the Forest</a>
+        <a class="btn btn--secondary" href="specter-inspector.html">Next: Specter Inspector</a>
+        <a class="btn btn--tertiary" href="#overview">Back to Top</a>
+      </div>
+    </section>
+  </div>
 </div>
-
-<section class="panel fade-in">
-  <h2>My Roles:</h2>
-  <h3>Sole Level Designer:</h3>
-  <p>Being the only level designer on this project provided me with a lot of freedom to make creative choices about spatial layouts, puzzle design decisions, and shape the pacing of the game as a whole. It was a very big responsibility I never toook lightly.</p>
-  <p>This freedom accompanied me all the way from original ideation on the interior and exterior spaces of Barton, and throughout production of Barton.</p>
-  <p>Many of my decisions were made with the guidance and feedback of my cross disciplinary team. worked with other game and tech designers to ensure Barton's AI functionality worked within our level spaces. This was one of my key responsibilities when implementing changes and iterations in the level. If I change this prop, could it break Barton's pathing? How would a puzzle tweak influence difficulty, and how could we have Barton reflect this through dialogue or actions?</p>
-  <p>I also worked very closely with the environment art team, to ensure our level spaces properly showcased their assets, on both a macro and micro scale. The environment art team informed decisions I made regarding aligning level design choices with our art and architectural style. As well as accommodating their environmental decorations and placement of elements in the levels with my intended level pacing and gameplay beats.</p>
-  <p>More on this and more in my level design process section below!</p>
-  <h3>Qualitative User Researcher:</h3>
-  <p>I also served a user research role while working on Barton. Because I had a lot of agency with the level design choices I was making, I needed to ensure that the choices I was making were effective, and our players felt and experienced the intended atmosphere, tone, and gameplay beats of our levels.</p>
-  <p>I did weekly playtests, mostly being participant observation, and semi structured interviews post playtesting. Participants were chosen via convenience sampling on my peers and friends. These frequent playtests informed me on how the player moves through the spaces I was making, as well as gave me plenty of other meaningful data for other aspects of the team like tech, art, and design decisions. This playtesting I did, especially early on was instrumental to understanding how people played Barton, and contextualized within my level spaces.</p>
-  <p>I also conducted two separate research studies involving Barton. One study focused on level design readability & flow over time. The other focused on discovering if there is a difference between players that were briefed before playing Barton, and players that went into the experience 'blind'. Below are two posters I made, presenting this research I conducted:</p>
-  <div class="media-grid">
-    <figure class="media-frame"><img src="assets/psy-poster-2.png" alt="Research poster: briefed vs blind players" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/ur-poster.png" alt="Research poster: level flow over time" loading="lazy"></figure>
-  </div>
-  <p>This research poster compared two different groups of users who played Barton. Those who played with context of the game, and those who played blind. I found there was no significant difference between these groups!</p>
-  <p>This research poster compared the level flow and goals of the player across play testers in March 2025, and April 2025! My results showed that April play testers had clearer goals and an easier time navigating the level, compared to March playteters.</p>
-</section>
-
-<section class="panel fade-in">
-  <h2>Level Design Process:</h2>
-  <figure class="media-frame">
-    <img src="assets/facilityy.gif" alt="Facility level walkthrough" loading="lazy">
-  </figure>
-  <p>If you want to learn more about some of the individual scene compositions, and dive deeper into some of my composed shots for Barton, read my Dev Blog post Analyzing Scene Compositions From Barton!</p>
-</section>
-
-<section class="panel fade-in">
-  <h2>Project Overview:</h2>
-  <h3>Scope:</h3>
-  <p>Barton was created in Unreal Engine 5. Two semesters (about 30 weeks) of development time was allocated. Our team, Wise Reply, consisted of 20 people: 5 designers, 5 programmers, 9 artists, and 1 sound designer.</p>
-  <p>We sought to create a unique experience where the player crash lands on a desolate planet, and must work with a quirky bot named Barton, to ascend an abandoned research facility, and escape together. All while the player and Barton can converse back and forth with each other, building a rapport and relationship that's entirely unique. Because of Barton's dialogue being non deterministic, no one playthrough will ever be the same as the last.</p>
-  <p>We mainly wanted to emphasize the player building a connection with Barton through gameplay. Thus, the subsequent puzzles and obstacles the player and Barton faced were created not to necessarily challenge the player, but to give them meaningful goals and objectives to overcome together.</p>
-  <p>The player and Barton work together to open a door leading deeper into the facility.</p>
-  <figure class="media-frame">
-    <img src="assets/barton-screenshot-2025.04.11-00.59.12.61.png" alt="Barton puzzle gameplay" loading="lazy">
-  </figure>
-  <h3>Team Collaboration:</h3>
-  <p>I worked with the other designers to narrow down the many affordances of Barton. Or in other words, what he can and can't do and interact with within the game world. This was shaped by testing and iterating based on prototyping different puzzles and mechanics the player and Barton could contextualize with.</p>
-  <p>We wanted the player and Barton to have an interesting variety of mechanisms to interact with, and environments to pass through. The pressure plate functions differently than a lever, but both can be recognized as a key-word for Barton, allowing him to recognize and interact with these objects.</p>
-  <p>I worked with programmers and technical designers to ensure that Barton was able to function in the level spaces I was creating. Tweaking Barton's interactions and ensuring that every available option the player had to pass through a challenge worked as intended, was at times quite difficult.</p>
-  <p>I worked very closely with the environment art team to ensure that the assets from micro to macro scale were properly integrated within level spaces. This ranged from tweaking the positions of props to improve sightlines or guidance. Or it was as extreme as replacing the prototyped blockmesh space of the entire interior (where most gameplay occurred), with finalized assets created by the art team.</p>
-  <p>Screenshots from the final version of the environments for Barton.</p>
-  <div class="media-grid">
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.33.06.49.png" alt="Barton environment screenshot" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.18.58.47.png" alt="Barton environment screenshot" loading="lazy"></figure>
-  </div>
-</section>
-
-<section class="panel gallery-section fade-in">
-  <h2>Screenshots & Media</h2>
-  <div class="archive-grid">
-    <figure class="media-frame"><img src="assets/facilityy.gif" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.24.57.34.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.18.58.47.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.55.53.09-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/psy-poster-2.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/ur-poster.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.59.12.61.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/screenshot-2025-04-02-204501.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.33.06.49.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.54.03.69-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-00.59.12.61-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-01.09.25.40.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.15.57.44.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.18.58.47-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.20.50.62.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.22.31.04.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.23.23.63.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.24.57.34-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.26.21.82.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.32.19.59.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.33.06.49-1.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.36.09.52.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.11-22.55.53.09.png" alt="" loading="lazy"></figure>
-    <figure class="media-frame"><img src="assets/barton-screenshot-2025.04.19-00.23.12.60.png" alt="" loading="lazy"></figure>
-  </div>
-</section>

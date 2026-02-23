@@ -1,10 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% assign page_title = page.title | default: site.title %}
+  {% assign page_description = page.description | default: site.description %}
+  {% assign canonical_url = page.url | absolute_url %}
+  {% assign og_image_path = page.og_image | default: "/assets/carterferry-edited-1.webp" %}
+  {% assign og_image_url = og_image_path | absolute_url %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ page.title }}</title>
-  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <script>document.documentElement.classList.add("js");</script>
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ og_image_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ og_image_url }}">
+  <meta name="theme-color" content="#0b1d2e">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +32,7 @@
 <body>
   {% include header.html %}
 
-  <main class="site-shell">
+  <main id="main-content" class="site-shell">
     {{ content }}
   </main>
 
@@ -22,7 +40,121 @@
 
   <script>
   (function () {
+    var navToggle = document.querySelector(".nav-toggle");
+    var nav = document.querySelector(".nav");
+    var navItems = document.querySelectorAll(".nav-item--has-dropdown");
+
+    if (!navToggle || !nav) return;
+
+    function isMobile() {
+      return window.matchMedia("(max-width: 960px)").matches;
+    }
+
+    function setDropdownState(item, isOpen) {
+      var btn = item.querySelector(".nav-expand");
+      var dropdown = item.querySelector(".nav-dropdown");
+      item.classList.toggle("is-open", isOpen);
+      if (btn) {
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+      if (dropdown) {
+        dropdown.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      }
+    }
+
+    function closeAllDropdowns(exceptItem) {
+      navItems.forEach(function (item) {
+        if (item !== exceptItem) {
+          setDropdownState(item, false);
+        }
+      });
+    }
+
+    function closeNavMenu(returnFocus) {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+      closeAllDropdowns();
+      if (returnFocus) navToggle.focus();
+    }
+
+    navItems.forEach(function (item) {
+      setDropdownState(item, false);
+    });
+
+    navToggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("nav-open", open);
+      if (!open) {
+        closeAllDropdowns();
+      }
+    });
+
+    navItems.forEach(function (item) {
+      var btn = item.querySelector(".nav-expand");
+      if (!btn) return;
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = item.classList.contains("is-open");
+        closeAllDropdowns(item);
+        setDropdownState(item, !isOpen);
+      });
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeAllDropdowns();
+        if (isMobile()) {
+          closeNavMenu(false);
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        var openItem = document.querySelector(".nav-item.is-open");
+        if (openItem) {
+          setDropdownState(openItem, false);
+          var openBtn = openItem.querySelector(".nav-expand");
+          if (openBtn) openBtn.focus();
+          return;
+        }
+        if (nav.classList.contains("is-open")) {
+          closeNavMenu(true);
+        }
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".site-header")) {
+        closeAllDropdowns();
+        if (isMobile() && nav.classList.contains("is-open")) {
+          closeNavMenu(false);
+        }
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.matchMedia("(min-width: 961px)").matches) {
+        nav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+      }
+    });
+  })();
+  </script>
+
+  <script>
+  (function () {
     var els = document.querySelectorAll(".fade-in");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) {
+      els.forEach(function (el) { el.classList.add("visible"); });
+      return;
+    }
+
     if ("IntersectionObserver" in window) {
       var obs = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
@@ -31,7 +163,7 @@
             obs.unobserve(e.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.05, rootMargin: "0px 0px 200px 0px" });
       els.forEach(function (el) { obs.observe(el); });
     } else {
       els.forEach(function (el) { el.classList.add("visible"); });
@@ -39,32 +171,5 @@
   })();
   </script>
 
-  <script>
-  (function () {
-    var hero = document.querySelector(".hero");
-    if (!hero) return;
-
-    var MAX_TILT = 2; // degrees
-
-    hero.addEventListener("mousemove", function (e) {
-      var rect = hero.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width * 2 - 1;
-      var y = (e.clientY - rect.top) / rect.height * 2 - 1;
-
-      var rotY = x * MAX_TILT;
-      var rotX = -y * MAX_TILT;
-
-      hero.style.transform =
-        "perspective(800px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg)";
-
-      hero.classList.add("tilt-active");
-    });
-
-    hero.addEventListener("mouseleave", function () {
-      hero.style.transform = "";
-      hero.classList.remove("tilt-active");
-    });
-  })();
-  </script>
 </body>
 </html>
