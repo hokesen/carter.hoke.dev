@@ -5,16 +5,14 @@ description: "Specter Inspector case study detailing 2D level design, design lea
 nav_active: "Portfolio"
 og_image: "/assets/screenshot-2025-06-27-143934.webp"
 ---
-<section class="hero fade-in section-center-headings" id="overview">
+<section class="hero fade-in section-center-headings section-center" id="overview">
   <h1>Specter Inspector</h1>
   <h2>What Is Specter Inspector?</h2>
-  <p class="section-summary">A 2D horror task-management and evasion game built in a custom engine, where gameplay occurs through draggable desktop-style windows.</p>
+  <p class="section-summary">A 2D horror themed task management &amp; evasion game, with a unique window mechanic. Use tools, navigate through an increasingly treacherous graveyard, while avoiding specters corrupting your screen. Operates as pop up draggable windows on your desktop. 8 person academic game team, created in a custom engine, shipped to Steam.</p>
   <figure class="media-frame">
     <img src="assets/screenshot-2025-06-27-143934.webp" alt="Specter Inspector gameplay screenshot" loading="eager" fetchpriority="high" decoding="async" width="1336" height="431">
   </figure>
-  <p>Players navigate a hostile graveyard, manage tools, and evade specters while maintaining situational awareness through constrained windowed views.</p>
-  <p>Developed by an 8-person academic team and shipped to Steam.</p>
-  <h2>Trailer</h2>
+  <h2>Watch the trailer below:</h2>
   <figure class="media-frame">
     <iframe class="media-embed" src="https://www.youtube.com/embed/RMa9AZh0DH0?rel=1&showinfo=1&fs=1&listType=playlist&list=PLW5DKXHQHWFYIc19weCqt_METKlU5IehL" title="Specter Inspector game trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
   </figure>
@@ -27,11 +25,11 @@ og_image: "/assets/screenshot-2025-06-27-143934.webp"
       <li><a href="#overview">Project Overview</a></li>
       <li><a href="#roles">Roles & Responsibilities</a></li>
       <li><a href="#process">Level Design Process</a></li>
-      <li><a href="#production">Production & Teaming</a></li>
+      <li><a href="#production">Production Details</a></li>
       <li><a href="#steam">Steam Polish & Release</a></li>
       <li><a href="#project-navigation">Project Navigation</a></li>
     </ol>
-    <p class="caption">Jump between sections while reviewing the full case study.</p>
+    <p class="caption">Quickly jump between sections!</p>
   </aside>
 
   <div class="project-flow">
@@ -41,68 +39,121 @@ og_image: "/assets/screenshot-2025-06-27-143934.webp"
       <div class="kpi"><strong>Shipped to Steam</strong></div>
     </div>
 
-    <section class="panel section-center-headings" id="roles">
+    <section class="panel section-center-headings section-center" id="roles">
       <h2>My Roles</h2>
-      <p class="section-summary">I worked as level designer and design lead, owning encounter flow, player readability, and design cohesion across gameplay systems.</p>
+      <p class="section-summary">I worked as a level designer, and design lead. I owned encounter flow, gameplay pacing, and design cohesion across gameplay systems.</p>
       <h3>Level Designer</h3>
-      <p>My primary responsibility was to ensure mechanics and systems were presented in spaces that made their purpose, risk, and payoff immediately legible to players.</p>
-      <p>I designed encounter pacing around tool friction, enemy variety, and constrained visibility to keep tension high without becoming unfair.</p>
+      <p>My goal and primary responsibility as the level designer was to ensure that the mechanics, systems, and intended gameplay of Specter Inspector were all exceptionally showcased and emphasized within the spaces where gameplay occurred.</p>
+      <p>We programmed 3 varieties of enemies? Well, then they all need to be utilized in meaningful ways that highlights their differences. We created a tool that uses consumable batteries? Well, lets make finding the batteries engaging, and put the player in interesting spots when they need to stop and load them!</p>
       <h3>Design Lead</h3>
-      <p>I aligned design direction with our game pillars, managed designer priorities, and coordinated implementation with engineering.</p>
-      <p>I also handled recurring playtesting and user research reporting to ensure iteration decisions were evidence-backed.</p>
-      <h3>Additional Contributions</h3>
-      <p>I composed the game’s original soundtrack (menu, gameplay, and trailer-associated track).</p>
+      <p>Ensuring design cohesion &amp; consistent progress was being made towards development was my primary responsibility as a design lead. This meant:</p>
+      <ul class="list">
+        <li>Ensuring our designers had relevant and impactful tasks to complete.</li>
+        <li>The overall direction of game design aligned with our game pillars.</li>
+        <li>Working with the tech team to realize and match prototype gameplay into our engine.</li>
+        <li>Support my fellow designers and teammates.</li>
+      </ul>
+      <h3>Music</h3>
+      <p>I created the original soundtrack for the game. Three tracks were created, one for the main menu, one for gameplay, and the other for a now scrapped final boss, that now serves as the trailer music! Listen to the OST below:</p>
       <figure class="media-frame">
         <iframe class="media-embed" src="https://www.youtube.com/embed/85pyUGlbIxQ?rel=1&showinfo=1&fs=1" title="Specter Inspector original soundtrack" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
       </figure>
     </section>
 
-    <section class="panel section-center-headings" id="process">
+    <section class="panel section-center-headings section-center" id="process">
       <h2>Level Design Process</h2>
-      <p class="section-summary">The process moved from Unity prototyping to custom-engine implementation, with repeated adjustments to pacing, navigation clarity, and challenge curves.</p>
-      <h3>Prototype Learning</h3>
-      <p>Early Unity prototypes established that complex mazes produced frustration, while broader, more directed spaces felt clearer and more engaging under window-limited visibility.</p>
-      <figure class="media-frame">
-        <img src="assets/ezgif-6408ef99d34d5c13.gif" alt="Unity prototype testing different window sizes and transitions" loading="lazy" decoding="async" width="800" height="450">
-        <figcaption>Unity prototype exploring window scale and transitions.</figcaption>
+      <p class="section-summary">My process started with top-down concepting, conducting rapid Unity prototyping, to final polish and level integration in our custom engine!</p>
+
+      <h3>Concepting &amp; Top-Down Maps</h3>
+      <p>In our initial early prototyping phases, I didn't plan out much level wise. I was mostly focused on getting a basic level space where we could test our mechanics and get a sense for how navigating spaces felt. There were bigger fish to fry.</p>
+      <p>But once preproduction was over, and the scope and size of the levels I had to make was defined, top-down planning and concepting served as the essential blueprint for our level spaces.</p>
+      <figure>
+        <div class="media-grid">
+          <figure class="media-frame"><img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(1)SpecterInspectorMod1map.jpg" alt="Beat map of the first four tutorial screens" loading="lazy" decoding="async"></figure>
+          <figure class="media-frame"><img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(2)SpecterInspectorMod3map.jpg" alt="Level map of the final ten screens" loading="lazy" decoding="async"></figure>
+        </div>
+        <figcaption>Beat maps for the tutorial module (left) and the final ten screens of the game (right), outlining geometry, pacing, scripted events, and gameplay beats before jumping into engine.</figcaption>
       </figure>
-      <h3>Flow Restructure</h3>
-      <p>The original single gauntlet level created uneven stress and pacing. I restructured the game into three modules to better onboard mechanics and escalate tension in a controlled arc.</p>
+      <p>Being able to break down a level into chunks that separate scripted events, gameplay beats, and difficulty was so useful &#8212; it makes an initially daunting process much more manageable!</p>
+
+      <h3>Testing in Unity</h3>
+      <p>I learned a lot in this phase. It was a lot of playtesting, implementing new mechanics and seeing how they jived with the rest of the game, and iterating based on that feedback. For the first half of development, programmers were building our custom engine from only a handful of libraries &#8212; so while the tech team was figuring out how to make a rectangle render on screen, us designers were rapidly prototyping gameplay in Unity that we hoped would one day have functionality in our engine&#8230;</p>
+      <figure class="media-frame">
+        <img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(3)UnityPototypeGif.gif" alt="Unity prototype experimenting with window sizes and level transitioning" loading="lazy" decoding="async">
+        <figcaption>A Unity prototype experimenting with different window sizes &amp; level transitioning.</figcaption>
+      </figure>
+      <p>The structure of our level during initial prototyping was one long gauntlet with no checkpoints, gradually getting more difficult. However, this format led to player frustration, uneven pacing, and an overtly stressful experience. We wanted the player to feel tension &#8212; not punishment.</p>
+      <p>To fix these pacing issues, I decided to separate the game into three distinct modules:</p>
       <ul class="list">
-        <li>Inspector Training: movement and baseline interactions.</li>
-        <li>E.M.F. Training: specter detection and low-risk encounters.</li>
-        <li>E.M.P. Training: higher-intensity scenarios and climax.</li>
+        <li>Inspector Training &#8212; Movement &amp; base game tutorial, 4 screens of levels.</li>
+        <li>E.M.F. Training &#8212; E.M.F. tool usage &amp; simple but progressively more difficult encounter design, 10 screens of levels.</li>
+        <li>E.M.P. Training &#8212; E.M.P. tool usage, 10 screens of levels featuring more involved, difficult, &amp; thoughtful encounter design, climaxing in a challenging finale!</li>
       </ul>
       <figure class="media-frame">
-        <img src="assets/screenshot-2024-02-07-153058-1.png" alt="Specter Inspector level screen from Unity editor" loading="lazy" decoding="async" width="979" height="610">
-        <figcaption>A full-screen view from the Unity prototyping phase.</figcaption>
+        <img src="assets/SpecterInspectorBlog/EMPBlastin.gif" alt="Module 3 gameplay showing EMP, batteries, and EMF in action" loading="lazy" decoding="async">
+        <figcaption>Release gameplay from module 3 showing the E.M.P., batteries, and E.M.F. in action.</figcaption>
       </figure>
-    </section>
+      <p>Structuring the flow this way chunked our mechanics into individual, understandable sections of gameplay that allowed us to build tension and engagement in a cohesive arc.</p>
 
-    <section class="panel section-center-headings" id="production">
-      <h2>Production & Teaming</h2>
-      <p class="section-summary">A two-semester schedule with a custom engine required close coupling between design and engineering from prototype parity through serialized content integration.</p>
-      <h3>Scope</h3>
-      <p>Five programmers built the engine while three designers developed and iterated gameplay in parallel. The final game shipped with roughly 13 minutes of structured gameplay.</p>
-      <h3>Engine Integration</h3>
-      <p>We exported tilemaps, UI elements, enemies, and content data from Unity into our engine through JSON-based serialization.</p>
-      <p>My implementation work focused on geometry correction, collision tuning, encounter reliability, and continuous regression playtesting.</p>
-      <figure class="media-frame media-frame--narrow">
-        <img src="assets/spectralsquad.jpg" alt="Spectral Squad team logo" loading="lazy" decoding="async" width="1024" height="791">
-        <figcaption>Spectral Squad team mark.</figcaption>
+      <h3>Refining &amp; Polish</h3>
+      <p>Before shipping the finalized tilemaps into the custom engine, I was able to polish and change most of what I needed within the Unity tile editor. This phase was mostly eliminating soft locks, streamlining flow, and making difficulty adjustments before my time was up.</p>
+      <figure class="media-frame">
+        <img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(6)Footprints.png" alt="Top-down view showing orange footprint trail in level" loading="lazy" decoding="async">
+        <figcaption>A top-down view of a screen as shown in Unity. The orange prints of someone who came before you pave the way&#8230;</figcaption>
       </figure>
+      <p>A fun addition was adding skeletons and the presence of previous inspectors in the level &#8212; their colored footprints can guide players to their final resting place.</p>
+
+      <h3>Integrating in Engine</h3>
+      <p>Roughly 15 weeks into the project, the custom engine became ready for serious gameplay integration. Our programmers opted not to build editor tools, and instead went for a more direct route: serializing every UI piece, tilemap, enemy, and game asset directly from Unity into the custom engine through JSON files.</p>
+      <p>This was an engineering choice we had in mind from the start &#8212; our engine's structure intentionally matched Unity's component-based system. Why build it all from scratch when we could bring it over directly?</p>
+      <p>Unsurprisingly, serializing large chunks of tilemaps did result in some friction. Identifying broken geometry, tweaking collisions, consistently testing, and staying in constant communication with the tech team were all key to getting these levels functional in the final build.</p>
       <figure class="media-frame">
         <img src="assets/screenshot-2024-04-15-205426.webp" alt="The opening composition of Specter Inspector" loading="lazy" decoding="async" width="1920" height="1014">
         <figcaption>The opening composition in the shipped experience.</figcaption>
       </figure>
     </section>
 
-    <section class="panel section-center-headings" id="steam">
+    <section class="panel section-center-headings section-center" id="production">
+      <h2>Production Details</h2>
+      <h3>Scope</h3>
+      <p>Custom engine built by 5 programmers. Two semesters (about 30 weeks) of development time. About 13 minutes of gameplay. Three distinct modules of gameplay.</p>
+      <h3>Team Collaboration</h3>
+      <p>With 3 designers and 5 programmers, we cohesively settled on the theme and concept for Specter Inspector very early in development. Us designers sorted ourselves into UX, tech design, and (for me) level design roles.</p>
+      <p>For the first half of development, programmers were building our custom engine from only a handful of libraries. This would take them roughly half of dev time to build the engine itself.</p>
+      <p>So while the tech team was figuring out how to make a rectangle render on screen, us designers were working together rapidly prototyping gameplay in Unity, that we hoped would one day have functionality in our engine&#8230;</p>
+      <figure class="media-frame" style="max-width: 75%; margin-inline: auto;">
+        <img src="assets/spectralsquad.jpg" alt="Spectral Squad team logo" loading="lazy" decoding="async" width="1024" height="791">
+        <figcaption>Our team logo, featuring each developer depicted as cute ghosts!</figcaption>
+      </figure>
+      <h3>Prototyping in Unity</h3>
+      <p>Once the concept of a draggable window that you see your character and the game world through was implemented in Unity, level iteration and ideation began.</p>
+      <p>I started creating 2D tile maps, and iterating on enemy behavior, level pacing, and balancing encounter design. Some lessons were learned early on, while others took much more time and investment to make themselves known. More on this later&#8230;</p>
+      <p>Much of these early tile maps never saw the light of day in the final game, but watching players navigate through these spaces while contextualizing with our mechanics helped me define and narrow down the types of spaces that served our unique concept well!</p>
+      <p>Mazes and complicated route-finding led to player frustration, while linear but open and wide levels were easier to understand and more compelling to navigate. Because the player can only ever see a small window of the game world, finding the right balance between involved route-finding and branching paths vs. entirely linear design was one of my many challenges to solve.</p>
+      <figure class="media-frame">
+        <img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(4)UnityPrototypin.png" alt="Unity prototype showing EMF tool and enemy" loading="lazy" decoding="async">
+        <figcaption>Initial prototypes of the E.M.F. tool and an enemy for the player to overcome, as viewed in Unity.</figcaption>
+      </figure>
+      <h3>Implementing Levels in a Custom Engine</h3>
+      <p>Roughly 15 weeks from when the project started, the custom engine became ready for serious gameplay integration. Our programmers decided not to create editor tools for us designers to use, and opted for a more direct route in regards to integrating gameplay into the custom engine.</p>
+      <p>Instead of building it all from scratch in engine based on the prototypes us designers had been creating, we had an illuminating thought: why should we build it all anew if we can instead just bring it over directly from Unity? We would serialize every UI piece, tile map, enemy, and game asset directly from Unity into our custom engine through JSON files.</p>
+      <p>Our programmers had this in mind from the start, so the structure of our engine intentionally matched the component-based system that Unity is built like. Serializing every asset was a tedious process, which mostly fell to the purview of our producer.</p>
+      <p>Unsurprisingly, serializing large chunks of tile maps from Unity to a custom engine did result in some friction. On my part, identifying broken geometry, tweaking collisions, consistently testing, and being in constant communication with the tech team helped us get these levels functional! Getting objects properly rotated was especially difficult to nail down, and even in the final build some of the tiles were never properly rotated.</p>
+      <figure class="media-frame">
+        <img src="assets/hoke.dev.LevelDesignProcessAssets/SpecterInspectorLevelDesignProcessAssets/(7)ModuleComplete.png" alt="Win state of Specter Inspector in early engine build" loading="lazy" decoding="async">
+        <figcaption>The win state of Specter Inspector, captured in an early engine build.</figcaption>
+      </figure>
+    </section>
+
+    <section class="panel section-center-headings section-center" id="steam">
       <h2>Steam Polish & Release</h2>
       <p class="section-summary">After academic submission, we resumed development in summer 2025 for release polish, store assets, and final platform delivery.</p>
-      <p>Following a development pause, I helped rally a small strike team to prepare the Steam launch build.</p>
-      <p>Final work included UI updates, bug fixes, trailer production, and full Steam page asset creation.</p>
-      <p>Specter Inspector released on August 15, 2025.</p>
+      <p>After Specter Inspector was officially submitted in an academic capacity, development stopped entirely. The team took about a year away from Specter Inspector to work on another academic project called Barton (which you can read more about in my projects page!). Knowing the potential Specter Inspector had, and not wanting to squander it, I rallied a few of our most dedicated teammates behind me, and we spent the summer of 2025 paving the way for a Steam release.</p>
+      <h3>Final Touches</h3>
+      <p>We integrated the main menu, a few UI changes, and fixed a few minor bugs. The temptation to revisit my tile maps was certainly there, and there are changes I still wish I could have made to this day. But given the limited time and capacity we had, I deemed doing any additional level polish too risky, and settled for what we had.</p>
+      <h3>Release</h3>
+      <p>Then it was only a matter of creating all the required Steam assets, content for the store page, and library page. Creating the trailer, and all of these assets fell to me. Tasks which I happily completed. And soon enough, Specter Inspector released to the world on August 15th, 2025.</p>
+      <p>Below is a full gameplay video of Specter Inspector. Check out the level spaces I created, and see what the experience is like!</p>
       <figure class="media-frame">
         <iframe class="media-embed" src="https://www.youtube.com/embed/fjEROpR-FmE?rel=1&showinfo=1&fs=1&listType=playlist&list=PLW5DKXHQHWFYIc19weCqt_METKlU5IehL" title="Specter Inspector full gameplay video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe>
       </figure>

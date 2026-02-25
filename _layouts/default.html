@@ -30,6 +30,17 @@
   <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 </head>
 <body>
+  <script>
+  (function () {
+    var bgs = [
+      "url('/assets/EFSBackgrounds/BG2%20(2).png')",
+      "url('/assets/EFSBackgrounds/BG3.png')",
+      "url('/assets/EFSBackgrounds/BG4.png')"
+    ];
+    var pick = bgs[Math.floor(Math.random() * bgs.length)];
+    document.documentElement.style.setProperty('--bg-image', pick);
+  })();
+  </script>
   {% include header.html %}
 
   <main id="main-content" class="site-shell">
