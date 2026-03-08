@@ -1598,6 +1598,12 @@ figcaption {
     width: min(var(--max), 94vw);
   }
 
+  /* Override small inline max-width percentages on figures so they
+     don't render too tiny on narrow screens */
+  .media-frame[style*="max-width"] {
+    max-width: 82% !important;
+  }
+
   .media-grid,
   .archive-grid {
     grid-template-columns: 1fr;
