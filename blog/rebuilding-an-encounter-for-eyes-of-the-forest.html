@@ -1,0 +1,222 @@
+---
+layout: default
+title: "Rebuilding an Encounter for Eyes of the Forest | Carter Hoke"
+nav_active: "Dev Blog"
+---
+<article class="hero fade-in section-center-headings" id="overview">
+  <h1>Rebuilding an Encounter for Eyes of the Forest</h1>
+  <h2>Introduction:</h2>
+  <div class="longform">
+    <p>Hey there! This blog post will explore the process I went through to rebuild an encounter in Eyes of the Forest, a Third Person narrative driven atmospheric stealth game. Here's a little context:</p>
+    <p>One of the academic game teams I joined at my time at DigiPen was Team Reclamation, consisting of 26 members when I joined! One of my main responsibilities was to lead a strike team that would rework one of the most problematic sections of the game, encounter 3.</p>
+  </div>
+  <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+    <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%201.png" alt="Encounter 3 gameplay" loading="lazy">
+    <figcaption>Caption placeholder text</figcaption>
+  </figure>
+  <div class="longform">
+    <p>Encounter 3 lies in a complicated section of the game, at around the halfway point of the experience. The mentor character is injured, and cannot take the same path as the player. The player was just given a slingshot, introducing a new mechanic that can distract a hunter, buying you a chance to get away. The player has made it through the previous two encounters, so difficulty was set to increase here as well.</p>
+    <p>Seeing all the narrative, mechanic, and level flow challenges present here was very intimidating at first, as this encounter needed to do a lot of heavy lifting to succeed. And I just joined this team of mostly strangers, so getting right to it and proving myself felt important. With all that in mind, I was quite eager to begin. Let's dive into that process!</p>
+  </div>
+  <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+    <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%202.png" alt="Encounter 3 gameplay" loading="lazy">
+    <figcaption>Caption placeholder text</figcaption>
+  </figure>
+</article>
+
+<section class="grid">
+
+  <article class="panel fade-in section-center section-center-headings" id="process-walkthrough">
+    <h2>Process Walkthrough:</h2>
+    <div class="longform">
+      <p>This post walks through the four phases of developing this encounter:</p>
+      <ul>
+        <li><strong>Level Outline &amp; Preproduction:</strong> Ideating scope &amp; design decisions with the team, making top-down maps, and creating a beat map / level walkthrough document for the team to reference.</li>
+        <li><strong>Blockmeshing &amp; Testing in Engine:</strong> Creating the base level structure in Unreal, and iterating on compositions, flow, and spatial choices.</li>
+        <li><strong>Gameplay &amp; Level Implementation:</strong> Plugging in gameplay mechanics, environment art, and getting the space functional!</li>
+        <li><strong>Final Polish:</strong> Small tweaks to cover, difficulty, art assets, and tutorialization throughout the level.</li>
+      </ul>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Placeholder15.png" alt="Previous version of Encounter 3 before the rework" loading="lazy">
+      <figcaption>The previous version of Encounter 3, before the rework.</figcaption>
+    </figure>
+  </article>
+
+</section>
+
+<section class="panel fade-in section-center">
+  <h2>Jump through the process</h2>
+  <div class="btn-row btn-row--center">
+    <a class="btn btn--tertiary" href="#overview">Introduction</a>
+    <a class="btn btn--tertiary" href="#process-walkthrough">Process Walkthrough</a>
+    <a class="btn btn--tertiary" href="#preproduction">Level Outline &amp; Preproduction</a>
+    <a class="btn btn--tertiary" href="#blockmeshing">Blockmeshing &amp; Testing in Engine</a>
+    <a class="btn btn--tertiary" href="#implementation">Gameplay &amp; Level Implementation</a>
+    <a class="btn btn--tertiary" href="#polish">Final Polish</a>
+    <a class="btn btn--tertiary" href="#conclusion">Conclusion / Takeaways</a>
+  </div>
+</section>
+
+<section class="grid" style="margin-top: 2rem;">
+
+  <article class="panel fade-in section-center section-center-headings" id="preproduction">
+    <h2>Level Outline &amp; Preproduction:</h2>
+    <div class="longform">
+      <p>After my onboarding was complete, and the design team got a bearing on what priorities we would be focusing on, I was officially assigned to work on rebuilding this encounter. I began by talking scope, constraints, tone, difficulty, and all things gameplay related that was up in the air with our design, art, and engineering departments. With this information I created a level beat map / breakdown of how my plan for the new space would function.</p>
+      <p>This document served as a treatment others could reference, and align our vision on. It broke down level structure and beats, technical, narrative, art, and design needs. It did not answer every question we had, but it was a great starting place, and got the ball rolling on identifying needs for this level. The document also served to create productive conversations about how these level changes would occur!</p>
+      <p>I also iterated on a top-down map / overview for this space, and eventually made this paper map that served as a great outline for how I wanted the level space to flow. Somewhat surprisingly, the final iteration of this space in engine still did end up looking a lot like this original top-down map:</p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 37.5%; margin-inline: auto;">
+      <img src="../assets/hoke.dev.LevelDesignProcessAssets/TopDownMaps/Encounter3map.jpg" alt="Top-down paper map of Encounter 3" loading="lazy">
+    </figure>
+  </article>
+
+  <article class="panel fade-in section-center section-center-headings" id="blockmeshing">
+    <h2>Blockmeshing &amp; Testing in Engine:</h2>
+    <div class="longform">
+      <p>With my plan in place, support from my team, and the clock ticking, I hopped right into blockmeshing and creating this level space!</p>
+    </div>
+    <figure class="media-frame contain">
+      <img src="../assets/EOTFSitePics/Encounter3Blockout.png" alt="Early blockout of Encounter 3" loading="lazy">
+      <figcaption>I iterated on placing cover, climbable walls, testing navigation time, pacing, flow, and sightlines. This early version of elements placed in the level was the broad blueprint of spacing between these features.</figcaption>
+    </figure>
+    <figure class="media-frame contain">
+      <img src="../assets/EOTFSitePics/Encounter3LookingBack.png" alt="Looking back at the Encounter 3 blockout" loading="lazy">
+      <figcaption>Looking back from the end of the level in this early version. Base terrain, rocks, and climbing walls in place here.</figcaption>
+    </figure>
+  </article>
+
+  <article class="panel fade-in section-center section-center-headings" id="implementation">
+    <h2>Gameplay &amp; Level Implementation:</h2>
+    <div class="longform">
+      <p>With the big swings of placing these elements in our level complete, I transitioned to working with engineering and tech designers to add gameplay functionality!</p>
+      <p>Things like checkpoints, killboxes, UI, and narrative triggers were easy to place, and we faced low friction integrating these. But other features proved more difficult...</p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%206.png" alt="Falling into the river" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="longform">
+      <p>Tweaking the spline of the hunter's spotlight, to ensure the spotlight shined along the path the player took some serious fine tuning. The speed at which the spotlight moved was very important too. How long the open window the player has to move without being seen influenced how cover, climbing walls, and other gameplay elements were placed and spaced.</p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%207.png" alt="Spotlight moving past the player" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="longform">
+      <p>Encounter 3 also introduced a new mechanic seen only in this area of the game — signaling your companion Russel to move forwards. This feature we decided on so as to give the player and Russel a little more connection, despite the player's path being isolated from Russel. I ended up implementing this feature only twice in the level. It added some variety and an aspect of teamwork to progressing through this encounter!</p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%208.png" alt="Signaling Russel to move forwards" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="longform">
+      <p>Throughout the weeks, I found myself tweaking the size and spacing of cover objects, foliage, and filling in empty holes that add meaningful geometry for the player to contextualize with.</p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%209.png" alt="Finalized Encounter 3 gameplay" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="longform">
+      <p>I also helped conduct a study with two other user researchers on our team, measuring the effectiveness of the game's delivery of suspense, as well as qualitative measurements of user experience. The results of this study helped me make changes to the level based on evidence-backed findings!</p>
+      <p>We tested 13 participants, and spent a weekend cleaning and coding hours of eye tracking footage, facial, and audio recordings into an organized actionable spreadsheet. Sorting things like:</p>
+      <ul>
+        <li>Noteworthy verbal comments from participants</li>
+        <li>Participant signs of frustration (and by what cause)</li>
+        <li>Amount of deaths (and by what cause)</li>
+        <li>Amount of times the slingshot was used (and for what purpose)</li>
+        <li>Fun emergent findings (what did we discover, only in these findings?)</li>
+        <li>And of course, B U G S!</li>
+      </ul>
+      <p>Going through this data by hand, and gaining actionable tasks from the research report we wrote up for the team was an extremely valuable part of this process for me. It showed me directly what players were experiencing, and allowed me the opportunity to make changes based on their direct feedback, and other findings supported by our study.</p>
+      <p>Because of some of the difficulties I observed in this study and other tests, I added:</p>
+      <ul>
+        <li>Extra checkpoints that reduced repeated step retracing after a death, which quickly makes participants lose engagement.</li>
+        <li>Invisible walls next to cliffsides, so panicking players don't sprint off a cliff to their doom. This provided just enough security to make the game a little more accessible for folks who may play differently!</li>
+        <li>We also solved a number of logic &amp; UI related bugs in this level, increasing immersion and refining a more consistent user experience across the encounter.</li>
+      </ul>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2010.png" alt="Suspense study data" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="longform">
+      <p>I also added two logs near the beginning and end of the encounter. The logs are optional, giving players meaningful choices of cover in approach. Do you sprint past the log, or crouch into it, treading a little more carefully? In these instances, the agency of the player and the feel of the level space was easily improved by adding these logs.</p>
+    </div>
+    <div class="media-grid">
+      <figure class="media-frame" style="max-width: 50%; margin-inline: auto;">
+        <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2011.png" alt="Beginning log in Encounter 3" loading="lazy">
+        <figcaption>Caption placeholder text</figcaption>
+      </figure>
+      <figure class="media-frame" style="max-width: 50%; margin-inline: auto;">
+        <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2012.png" alt="Ending log in Encounter 3" loading="lazy">
+        <figcaption>Caption placeholder text</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="panel fade-in section-center section-center-headings" id="polish">
+    <h2>Final Polish:</h2>
+    <div class="longform">
+      <p>As the saying goes, art is never finished, only abandoned. A sad reminder of the fleeting nature of the projects we work on. But it is a mantra that reminds us we must make a meaningful impact while we can! So that's what I tried to manifest in our final polish stage.</p>
+      <p>Because of my limited time, I was making small tweaks to cover, environment art, and other small set dressing elements right up until our final level lock.</p>
+      <p>Completing passes over Encounter 3, and also the whole game. The goal of these passes was to increase consistency throughout:</p>
+      <ul>
+        <li>Terrain textures (no distracting stretched stone textures, mostly moss and mud painted terrain layers)</li>
+        <li>Foliage placement, in midgrounds and backgrounds. It should feel like the bottom of a forest!</li>
+        <li>Background assets &amp; tree billboards to patch holes in the sky. It should feel like a vast, expansive forest.</li>
+        <li>Final guidance tweaks like adding fireflies, guiding paw decals, and tweaking props and leading lines to strengthen scene compositions.</li>
+      </ul>
+      <p>Because of the large size and length of the game, there was a lot of level space to polish and work on. But in the end we all feel great about the consistency, pacing, and gameplay. And for me, I was always seeking to do my best.</p>
+    </div>
+    <div class="media-grid">
+      <figure class="media-frame" style="max-width: 50%; margin-inline: auto;">
+        <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2012.png" alt="Previous version of Encounter 3" loading="lazy">
+        <figcaption>Before</figcaption>
+      </figure>
+      <figure class="media-frame" style="max-width: 50%; margin-inline: auto;">
+        <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2013.png" alt="Final version of Encounter 3" loading="lazy">
+        <figcaption>After</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <article class="panel fade-in section-center section-center-headings" id="conclusion">
+    <h2>Conclusion / Takeaways:</h2>
+    <div class="longform">
+      <p>The experience of rebuilding this encounter from the ground up was an excellent way for me to refine and practice this pipeline:</p>
+      <ul>
+        <li>Level Outline &amp; Preproduction</li>
+        <li>Blockmeshing &amp; Testing in Engine</li>
+        <li>Gameplay &amp; Level Implementation</li>
+        <li>Final Polish</li>
+      </ul>
+      <p><strong>What went well during this process:</strong></p>
+      <ul>
+        <li>Playtesting &amp; iterating based on feedback</li>
+        <li>Communication with designers</li>
+        <li>Setting the perfect scope and size of the encounter.</li>
+      </ul>
+      <p><strong>What I wish could have happened during this process:</strong></p>
+      <ul>
+        <li>More comprehensive support from the tech team</li>
+        <li>Following a set timeline and task tracking software</li>
+        <li>Working closer with environment artists on a micro scale, not just a macro overview of the level.</li>
+      </ul>
+      <p>With all this learned and gained throughout the process of building this encounter, and working on the rest of Eyes of the Forest as a whole, it leaves me a satisfied level designer. I was given a goal, set up to succeed, got help when I needed it, and helped shape an exceptionally engaging and fun section of an atmospheric stealth game!</p>
+      <p>Thank you for reading, I hope you learned something!</p>
+      <p><strong>&#8212;Carter Hoke</strong></p>
+    </div>
+    <figure class="media-frame contain" style="max-width: 50%; margin-inline: auto;">
+      <img src="../assets/Placeholder%20Images%20EOTF/Plaecholder%2014.png" alt="Encounter 3 final gameplay" loading="lazy">
+      <figcaption>Caption placeholder text</figcaption>
+    </figure>
+    <div class="btn-row btn-row--center">
+      <a class="btn btn--secondary" href="https://store.steampowered.com/app/4395790/Eyes_of_the_Forest/" target="_blank" rel="noreferrer">View Eyes of the Forest on Steam</a>
+      <a class="btn btn--tertiary" href="../dev-blog.html">Back to Dev Blog</a>
+      <a class="btn btn--tertiary" href="#overview">Back to Top</a>
+    </div>
+  </article>
+
+</section>
