@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+  
+  
+  
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>document.documentElement.classList.add("js");</script>
+  <title>Eyes of the Forest | Carter Hoke</title>
+  <meta name="description" content="Eyes of the Forest project overview featuring level design contributions, team context, and visual previews.">
+  <link rel="canonical" href="https://carter.hoke.dev/eyes-of-the-forest.html">
+  <meta property="og:title" content="Eyes of the Forest | Carter Hoke">
+  <meta property="og:description" content="Eyes of the Forest project overview featuring level design contributions, team context, and visual previews.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Carter Hoke">
+  <meta property="og:url" content="https://carter.hoke.dev/eyes-of-the-forest.html">
+  <meta property="og:image" content="https://carter.hoke.dev/assets/eyes-of-the-forest.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eyes of the Forest | Carter Hoke">
+  <meta name="twitter:description" content="Eyes of the Forest project overview featuring level design contributions, team context, and visual previews.">
+  <meta name="twitter:image" content="https://carter.hoke.dev/assets/eyes-of-the-forest.webp">
+  <meta name="theme-color" content="#0b1d2e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <script>
+  (function () {
+    var bgs = [
+      "url('/assets/EFSBackgrounds/BG2%20(2).png')",
+      "url('/assets/EFSBackgrounds/BG3.png')",
+      "url('/assets/EFSBackgrounds/BG4.png')"
+    ];
+    var pick = bgs[Math.floor(Math.random() * bgs.length)];
+    document.documentElement.style.setProperty('--bg-image', pick);
+  })();
+  </script>
+  <header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-shell header-inner">
+    <a class="brand" href="/">
+      <span class="brand-title">Carter Hoke</span>
+      <span class="brand-subtitle">Level Design &amp; User Research</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Toggle main navigation</span>
+      <span class="nav-toggle-label">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <div class="nav-item nav-item--has-dropdown">
+        <div class="nav-link-row">
+          <a href="/portfolio.html" aria-current="page">Portfolio</a>
+          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="portfolio-subnav" aria-haspopup="true">
+            <span class="sr-only">Toggle portfolio submenu</span>
+            <span class="nav-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+        <div class="nav-dropdown" id="portfolio-subnav" aria-hidden="true">
+          <a href="/eyes-of-the-forest.html" aria-current="page">Eyes of the Forest</a>
+          <a href="/barton.html">Barton</a>
+          <a href="/specter-inspector.html">Specter Inspector</a>
+          <a href="/expansive-fantasy-survival.html">Expansive Fantasy Survival</a>
+        </div>
+      </div>
+      <a href="/about.html">About</a>
+      <a href="/resume.html">Resume</a>
+      <div class="nav-item nav-item--has-dropdown nav-item--right">
+        <div class="nav-link-row">
+          <a href="/dev-blog.html">Dev Blog</a>
+          <button class="nav-expand" type="button" aria-expanded="false" aria-controls="dev-blog-subnav" aria-haspopup="true">
+            <span class="sr-only">Toggle dev blog submenu</span>
+            <span class="nav-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+        <div class="nav-dropdown" id="dev-blog-subnav" aria-hidden="true">
+          <a href="/blog/examining-encounter-specter-inspector.html">Examining An Encounter From Specter Inspector</a>
+          <a href="/blog/analyzing-scene-compositions-in-barton.html">Analyzing Scene Compositions From Barton</a>
+          <a href="/blog/rebuilding-an-encounter-for-eyes-of-the-forest.html">Rebuilding an Encounter for Eyes of the Forest</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+  <main id="main-content" class="site-shell">
+    <section class="hero fade-in section-center-headings section-center" id="overview">
+  <h1>Eyes of the Forest</h1>
+  <h2>What Is Eyes of the Forest?</h2>
+  <p class="section-summary">A third-person narrative stealth experience where players navigate a dangerous abandoned forest as Thistle, balancing exploration, tension, and environmental storytelling.</p>
+  <p>Eyes of the Forest is a narrative driven atmospheric third person experience, where you play as a mouse named Thistle. Navigate and stealth along the bottom of a dark and fantastical forest, with your raccoon mentor. Escape with an important artifact, while avoiding the horrific hunters that stalk the forest&hellip;</p>
+  <p>A four semester academic project — I joined our team, Reclamation, for their final two semesters. Created in Unreal Engine 5, about 20 minutes of gameplay, releasing on Steam.</p>
+  <figure class="media-frame">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K98OAQxE4Y0" title="Eyes of the Forest gameplay snippet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%;aspect-ratio:16/9;height:auto;"></iframe>
+    <figcaption>Eyes of the Forest gameplay snippet.</figcaption>
+  </figure>
+  <div class="btn-row btn-row--center">
+    <a class="btn btn--secondary" href="https://store.steampowered.com/app/4395790/Eyes_of_the_Forest/" target="_blank" rel="noreferrer">View on Steam</a>
+  </div>
+</section>
+
+<div class="project-layout fade-in">
+  <aside class="panel page-toc" aria-label="Eyes of the Forest page outline">
+    <h2>On This Page</h2>
+    <ol class="list">
+      <li><a href="#overview">Project Overview</a></li>
+      <li><a href="#roles">Roles & Responsibilities</a></li>
+      <li><a href="#process">Level Design Process</a></li>
+      <li><a href="#details">Production Details</a></li>
+      <li><a href="#project-navigation">Project Navigation</a></li>
+    </ol>
+    <p class="caption">Quickly jump between sections!</p>
+  </aside>
+
+  <div class="project-flow">
+    <div class="kpi-row kpi-row--three kpi-row--centered">
+      <div class="kpi"><strong>26 Person Team</strong></div>
+      <div class="kpi"><strong>Unreal Engine 5</strong></div>
+      <div class="kpi"><strong>Releasing on Steam</strong></div>
+    </div>
+
+    <section class="panel section-center-headings section-center" id="roles">
+      <h2>My Roles</h2>
+      <p class="section-summary">Joining Team Reclamation for their final two semesters, I served as a level designer and user researcher on a 26-person team — leading a full encounter overhaul, improving flow and pacing across the game, and contributing to a final polish sprint targeting a Steam release.</p>
+
+      <h3>Level Designer</h3>
+      <p>After onboarding, I joined forces with the game design team, composed of UX, UR, narrative, tech design disciplines, and three other level designers I worked closely with. I worked with our full 26 person team, <strong>leading a vast level overhaul for a problematic encounter</strong>.</p>
+      <p>I also made flow and pacing level changes throughout the game. All while supporting other designers and working closely with engineering and environment artists to deliver a functional, engaging experience in polished and tested spaces.</p>
+      <p>The second half of my time with Eyes of the Forest was on a reduced 4 person strike team, focusing on final level and UX polish, getting the experience Steam ready, and conducting a final marketing push! During this phase, I helped fix level streaming issues, refined the difficulty curve, set dressed and beautified level spaces, integrated tutorialization UI, and improved overall level cohesion through precise tweaks throughout the game.</p>
+      <figure class="media-frame">
+        <img src="assets/ReclamationLogo.png" alt="Team Reclamation logo" loading="lazy">
+        <figcaption>Reclamation Team Logo</figcaption>
+      </figure>
+
+      <h3>User Researcher</h3>
+      <p>Though I was primarily serving a level design role, I also served a secondary user research role. I helped coordinate playtesting events, and worked with two other user researchers to <strong>conduct an eye-tracking study measuring how 13 players perceived suspense, difficulty, and various visual aspects of our game.</strong> Me and my UR teammates cleaned and coded the resulting data, and subsequently presented an actionable UR report to our team.</p>
+      <p>I also facilitated public pre-release playtesting at the WA state gaming expo February of 2026, <strong>testing over 50 convention goers over the course of the weekend</strong> in a public expo floor!</p>
+      <figure class="media-frame">
+        <img src="assets/WAGamingExpoBooth.jpg" alt="WA State gaming expo booth" loading="lazy">
+        <figcaption>From left to right, Teddy (Producer & UX Designer), Tuli (Environment Artist), Carter (Level Designer), & Kelty (Level Designer).</figcaption>
+      </figure>
+    </section>
+
+    <section class="panel section-center-headings section-center" id="process">
+      <h2>Level Design Process</h2>
+      <p class="section-summary">My process on Eyes of the Forest spanned a ground-up encounter rebuild, pacing and flow improvements across the full game, and a final polish sprint. Read on for an in-depth look at how I approached each phase.</p>
+
+      <p>For an in depth look at one of my principal level design contributions to this project, check out my blog post exploring the process of rebuilding an encounter in Eyes of the Forest.</p>
+      <p>The post dives into my steps, process, and outcome for the ground up endeavor of rebuilding encounter 3:</p>
+      <div class="btn-row btn-row--center" style="margin-top: 1.25rem; margin-bottom: 1.25rem;">
+        <a class="btn btn--secondary" href="blog/rebuilding-an-encounter-for-eyes-of-the-forest.html">Rebuilding an Encounter for Eyes of the Forest</a>
+      </div>
+
+      <h3>Preproduction, Top-Down Maps &amp; Planning</h3>
+      <p>Top down planning, defining scope, identifying spatial archetypes to use, and plotting level beats on paper is always an important and foundational step of the level design process.</p>
+      <p>Because I was rebuilding an encounter from scratch, I created this top down map to reflect my vision, and serve as the blueprint for working in engine.</p>
+      <figure class="media-frame contain">
+        <img src="assets/E3TDMap.jpeg" alt="Top-down map of Encounter 3" loading="lazy" decoding="async">
+        <figcaption>Top-down map for Encounter 3's rebuild, used as a working blueprint in engine.</figcaption>
+      </figure>
+      <p>But because I joined this project halfway into development, the remainder of my tasks outside of rebuilding Encounter 3 involved little pre-production, as most of our spaces were already created.</p>
+      <p>My other level design responsibilities involved sculpting and streamlining sections of the game here and there, and tackling individual problems and areas that needed love throughout our expansive level spaces.</p>
+      <p>Not to say there was no preparation or preproduction for these tasks, but more so the extent of my planning was not as vast as the larger tasks already completed. This next section dives into some of these more bite sized level design samples and individual areas I worked on!</p>
+
+      <h3>Iterating in Engine &amp; Completing Tasks</h3>
+      <p>After the bulk of my work on Encounter 3 was complete, I took on a handful of other tasks. Some larger and more daunting, like making the town area feel dense with houses and like it was once alive. Other tasks, like tweaking pacing, level beats, and shaping intentional compositions, were all bite-sized chunks of work I knocked out. I also made significant gameplay changes to Encounters 2, 3, and 4 within Eyes of the Forest. This is some of the level design work I feel most proud of from this project:</p>
+
+      <h3>Making The Town Feel Authentic</h3>
+      <p>One of the first locations the player discovers along their journey is an abandoned town. But something here wasn't working right&hellip;</p>
+      <p><strong>Problems:</strong></p>
+      <ul class="list">
+        <li>The town felt empty — only a few houses along the golden path, blank midgrounds, leading to a desolate, bland feeling space.</li>
+        <li>The guidance was lacking, and players often got turned around or confused on where to go next.</li>
+        <li>There were softlocks, inconsistent environment assets, and (to put it bluntly), the whole dump just needed a makeover!</li>
+      </ul>
+      <figure class="media-frame">
+        <img src="assets/EOTFSitePics/350Towny.gif" alt="Town area before rework" loading="lazy">
+        <figcaption>The town previous to my work on it.</figcaption>
+      </figure>
+      <p>Solutions:</p>
+      <ul class="list">
+        <li>I added dozens of more houses, structures, and ancient signs of life in the background, foreground, and midground spaces. Hundreds of critterfolk like Thistle (the game's protagonist) used to live here, so let's show their former presence!</li>
+        <li>I implemented the broken statue as a focal point for the space. It is a dominant feature that draws the player in, and is emphasized in a cinematic sequence.</li>
+        <li>I fixed softlocks, improved guidance via placing lamp posts, fireflies, pathway texturing, and using the level geometry to lead the player's eye where they need to go!</li>
+      </ul>
+      <figure class="media-frame">
+        <img src="assets/EOTFSitePics/375Town.gif" alt="Looking around the reworked town" loading="lazy">
+        <figcaption>The now populated and streamlined town after my work on it.</figcaption>
+      </figure>
+
+      <h3>Improving Encounter 2</h3>
+      <p>The lead up to the second encounter of the game needed a hand with pacing, as well as the second half of the encounter was in need of some variety in gameplay choices.</p>
+      <p><strong>Problems:</strong></p>
+      <ul class="list">
+        <li>The composition at the beginning of the encounter didn't frame the hunter, and didn't build appropriate tension for the upcoming segment of gameplay. <strong>The player needed to feel like a lonely and lost mouse that just stumbled their way into a treacherous hunting ground.</strong> So how can I support that through the level design?</li>
+        <li>Guidance elements, size of cover objects, leading lines, and foliage all needed tweaks.</li>
+        <li>The second half of the encounter was another straight flat run, almost exactly like the one before it. There needed to be some variety and something that evolved the space. And I had just the idea&hellip;</li>
+      </ul>
+      <figure class="media-frame">
+        <img src="assets/EOTFSitePics/350Encounter2.gif" alt="Encounter 2 before rework" loading="lazy">
+        <figcaption>Encounter 2 previous to my work on it.</figcaption>
+      </figure>
+      <p><strong>Solutions:</strong></p>
+      <ul class="list">
+        <li>I tweaked the flow of the pathway the player takes to arrive at the beginning of this encounter.</li>
+        <li>I made it more claustrophobic and winding, using verticality to vary the terrain. I also <strong>added a dead end here that forces the player to turn around and recompose themselves before proceeding</strong>, reinforcing the intended user feeling of uncertainty and unsteadiness.</li>
+      </ul>
+      <figure class="media-frame">
+        <img src="assets/EOTFSitePics/Encounter2Opening.gif" alt="Encounter 2 opening composed shot" loading="lazy">
+        <figcaption>The opening of encounter 2 after my work on it.</figcaption>
+      </figure>
+      <p>Some players didn't know which way to head once they got into the open space of the encounter proper, now under the pressure of the hunter's spotlight. To reduce the amount of people who would wander the wrong way into needless and frustrating deaths, we found a very useful solution:</p>
+      <p><strong>Glowing paw decals</strong> placed on the ground draw the player's eye and encourage them to head the direction the paws point towards. This is a trick we used here, and in many many other places in the game!</p>
+      <p><strong>Used subtly, these pawprints give players direction</strong> and a little goal to arrive at.</p>
+      <p>Using the paws too frequently diminishes their effectiveness, so finding the <strong>right balance</strong> of when to and when not to use these paw decals was interesting to discover and iterate upon!</p>
+      <figure class="media-frame">
+        <img src="assets/EOTFSitePics/Encounter2Sprint.gif" alt="Paw decals guiding the player" loading="lazy">
+        <figcaption>Paw decals offer subtle guidance and point the player where they need to go.</figcaption>
+      </figure>
+      <p>The final stretch of this encounter was originally a flat stretch, with only one option. Run for it! So <strong>what if we gave the player some more agency instead</strong>? To suit different playstyles, I implemented two options:</p>
+      <ul class="list">
+        <li>Option 1: dip down and sprint through the last stretch, risking exposure to the hunter, but getting out faster!</li>
+        <li>Option 2: take a more covered approach, and crouch through a fallen hollow log to safety.</li>
+      </ul>
+      <div class="media-grid">
+        <figure class="media-frame">
+          <img src="assets/EOTFSitePics/Encounter2SprintAroundLog.gif" alt="Sprinting past the log" loading="lazy">
+          <figcaption>Some players opt for a faster more direct approach, run for it!</figcaption>
+        </figure>
+        <figure class="media-frame">
+          <img src="assets/EOTFSitePics/Encounter2UsingLog.gif" alt="Using the log for cover" loading="lazy">
+          <figcaption>Others with more cautious timid playstyles may opt for using the hollow log!</figcaption>
+        </figure>
+      </div>
+      <p>Providing the player with varying options on how to proceed helps enrich the space, and provide meaningful choices that suit different playstyles! Designing with multiple solutions is a lesson and a practice that working on this project constantly reminded me the importance of!</p>
+
+      <h3>Polish &amp; Final Touches</h3>
+      <p>After the tribulations of testing, iterating, and eventually feeling decent enough about the quality and effectiveness of our work, we locked in on final polish and finishing touches phase. These are some of the final polish tasks we completed:</p>
+      <ul class="list">
+        <li>Filling out foliage and improving consistency</li>
+        <li>Tweaking terrain textures to be more subtle</li>
+        <li>Tweaking assets that would be shown off in cutscenes still being added to the game. IE, since the camera points at this wall during this cutscene, I'll make the wall look more populated.</li>
+        <li>Lots of patching in holes in the trees that reveal the skybox. To save performance, we removed lots of high poly 3D trees, and replaced them with 2D tree billboards that filled out the backgrounds, improving immersion.</li>
+      </ul>
+      <p>More information and process details coming soon!</p>
+    </section>
+
+    <section class="panel section-center-headings section-center" id="details">
+      <h2>Production Details</h2>
+      <h3>Scope</h3>
+      <p>Eyes of the Forest is a four semester academic project built in Unreal Engine 5 by Team Reclamation, a 26-person team. I joined the team for their final two semesters of development.</p>
+      <p>The experience features approximately 20 minutes of gameplay, a fully realized narrative, and a third-person stealth core built around the perspective of Thistle — a small mouse navigating a vast and dangerous forest floor.</p>
+      <p>Eyes of the Forest is currently in final polish, targeting a Steam release.</p>
+      <h3>Team Collaboration</h3>
+      <p>Working within a 26-person team across design, engineering, art, and narrative disciplines required constant cross-functional communication. I coordinated closely with environment artists to ensure level spaces were populated with the right assets at both macro and micro scales — from terrain layout down to individual prop placement.</p>
+      <p>I worked with engineers and tech designers on gameplay integrations such as trigger placements, checkpoint logic, level streaming fixes, and ensuring that gameplay beats functioned correctly across each encounter.</p>
+      <p>Collaborating with our UX and narrative designers helped me ensure that <strong>the spatial story my level spaces told aligned with the broader emotional and narrative arc of the game.</strong></p>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--secondary" href="https://store.steampowered.com/app/4395790/Eyes_of_the_Forest/" target="_blank" rel="noreferrer">View Eyes of the Forest on Steam</a>
+      </div>
+    </section>
+
+    <section class="panel project-wayfinding section-center" id="project-navigation">
+      <h2>Explore More Projects</h2>
+      <div class="btn-row btn-row--center">
+        <a class="btn btn--tertiary" href="portfolio.html">Back to Portfolio</a>
+        <a class="btn btn--secondary" href="expansive-fantasy-survival.html">Previous: Expansive Fantasy Survival</a>
+        <a class="btn btn--secondary" href="barton.html">Next: Barton</a>
+        <a class="btn btn--tertiary" href="#overview">Back to Top</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="site-shell footer-inner">
+    <div class="footer-left">
+      <span>&copy; Carter Hoke</span>
+    </div>
+    <div class="footer-contact">
+      <span class="footer-contact-label">Contact:</span>
+      <div class="footer-contact-links">
+        <a href="https://www.linkedin.com/in/carter-hoke-46943325a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:carterhoke@gmail.com">carterhoke@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+  (function () {
+    var navToggle = document.querySelector(".nav-toggle");
+    var nav = document.querySelector(".nav");
+    var navItems = document.querySelectorAll(".nav-item--has-dropdown");
+
+    if (!navToggle || !nav) return;
+
+    function isMobile() {
+      return window.matchMedia("(max-width: 960px)").matches;
+    }
+
+    function setDropdownState(item, isOpen) {
+      var btn = item.querySelector(".nav-expand");
+      var dropdown = item.querySelector(".nav-dropdown");
+      item.classList.toggle("is-open", isOpen);
+      if (btn) {
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      }
+      if (dropdown) {
+        dropdown.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      }
+    }
+
+    function closeAllDropdowns(exceptItem) {
+      navItems.forEach(function (item) {
+        if (item !== exceptItem) {
+          setDropdownState(item, false);
+        }
+      });
+    }
+
+    function closeNavMenu(returnFocus) {
+      nav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+      closeAllDropdowns();
+      if (returnFocus) navToggle.focus();
+    }
+
+    navItems.forEach(function (item) {
+      setDropdownState(item, false);
+    });
+
+    navToggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("nav-open", open);
+      if (!open) {
+        closeAllDropdowns();
+      }
+    });
+
+    navItems.forEach(function (item) {
+      var btn = item.querySelector(".nav-expand");
+      if (!btn) return;
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = item.classList.contains("is-open");
+        closeAllDropdowns(item);
+        setDropdownState(item, !isOpen);
+      });
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        closeAllDropdowns();
+        if (isMobile()) {
+          closeNavMenu(false);
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        var openItem = document.querySelector(".nav-item.is-open");
+        if (openItem) {
+          setDropdownState(openItem, false);
+          var openBtn = openItem.querySelector(".nav-expand");
+          if (openBtn) openBtn.focus();
+          return;
+        }
+        if (nav.classList.contains("is-open")) {
+          closeNavMenu(true);
+        }
+      }
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".site-header")) {
+        closeAllDropdowns();
+        if (isMobile() && nav.classList.contains("is-open")) {
+          closeNavMenu(false);
+        }
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.matchMedia("(min-width: 961px)").matches) {
+        nav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+      }
+    });
+  })();
+  </script>
+
+  <script>
+  (function () {
+    var els = document.querySelectorAll(".fade-in");
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) {
+      els.forEach(function (el) { el.classList.add("visible"); });
+      return;
+    }
+
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.05, rootMargin: "0px 0px 200px 0px" });
+      els.forEach(function (el) { obs.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add("visible"); });
+    }
+  })();
+  </script>
+
+</body>
+</html>
