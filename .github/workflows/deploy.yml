@@ -21,12 +21,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install
 
       - name: Build with Jekyll
-        run: |
-          gem install github-pages
-          bundle exec jekyll build
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
