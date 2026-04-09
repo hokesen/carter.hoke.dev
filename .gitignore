@@ -1,0 +1,10 @@
+/screenshots/
+/.playwright-mcp/
+workspace.xml
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+.DS_Store
+/.idea/php.xml

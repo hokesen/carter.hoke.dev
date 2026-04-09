@@ -1,0 +1,13 @@
+title: Carter Hoke
+description: Level design portfolio and development blog for Carter Hoke.
+url: https://carter.hoke.dev
+baseurl: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .idea
+  - screenshots
+  - .claude
+  - .playwright-mcp
