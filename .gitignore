@@ -8,3 +8,4 @@ _site/
 Gemfile.lock
 .DS_Store
 /.idea/php.xml
+/.ai/mcp/mcp.json
