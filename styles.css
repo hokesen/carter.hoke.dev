@@ -245,6 +245,15 @@ main a:hover {
 .nav-link-row {
   display: flex;
   align-items: center;
+  gap: 0.1rem;
+}
+
+.nav-link-row > a {
+  padding-right: 0.5rem;
+}
+
+.nav-link-row .nav-expand {
+  margin-left: -0.2rem;
 }
 
 .nav-expand {
@@ -252,8 +261,8 @@ main a:hover {
   background: transparent;
   color: var(--muted);
   border-radius: 999px;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 2.6rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +279,7 @@ main a:hover {
 }
 
 .nav-chevron {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   opacity: 0.6;
   transition: transform var(--transition-fast);
   display: inline-block;
@@ -321,6 +330,23 @@ main a:hover {
   pointer-events: auto;
   transform: translateY(0);
   transition-delay: 0s;
+}
+
+@media (hover: hover) and (min-width: 961px) {
+  .nav-item--has-dropdown:hover .nav-dropdown,
+  .nav-item--has-dropdown:focus-within .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 120ms, 120ms, 0s;
+  }
+
+  .nav-item--has-dropdown:hover .nav-chevron,
+  .nav-item--has-dropdown:focus-within .nav-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
 }
 
 .nav-dropdown a {
@@ -413,7 +439,7 @@ main {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: clamp(1.6rem, 2.8vw, 2.75rem);
+  padding: 1.35rem 1.45rem 1.5rem;
 }
 
 .hero-row .hero .btn-row {
@@ -1006,6 +1032,10 @@ figcaption {
 @media (min-width: 961px) {
   .hero:not(.section-center) {
     padding: 0;
+  }
+
+  .hero-row .hero {
+    padding: 1.35rem 1.45rem 1.5rem;
   }
 
   .hero-split {
